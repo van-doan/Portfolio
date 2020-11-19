@@ -1,0 +1,39 @@
+:root {
+    background-color: #000;
+}
+
+[data-theme='light'] {
+    filter: invert(90%);
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+}
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    max-width: none;
+    height: 101vh;
+}
+
+.MuiSwitch-track {
+    background-color: #fff !important;
+}
+
+.MuiFormControlLabel-root {
+    transform: rotate(90deg);
+}
+
+.dark-mode-switch {
+    display: flex;
+    position: absolute;
+    left: 2.4%;
+    top: 30%;
+}
+
+@import "./partials/main";
+@import "./partials/navbar";

@@ -1,0 +1,17 @@
+.about-modal{
+    display: flex;
+    position: fixed;
+    left: 2%;
+    top: 40%;
+    transform: rotate(-90deg);
+    z-index: 10000;
+    .about {
+        font-family: 'Barlow', sans-serif;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
