@@ -13,7 +13,7 @@
         font-size: 14px;
         text-transform: uppercase;
         text-align: center;
-        cursor: crosshair;
+        cursor: pointer;
     }
 }
 .modal {
@@ -38,7 +38,9 @@
     background-color: rgba(0, 0, 0, .95);
     height: 100vh;
 }
-
+.about-section2 {
+    text-align: center;
+}
 .aboutme {
     display: flex;
     font-family: 'Josefin Sans', sans-serif;
@@ -47,9 +49,11 @@
 }
 .headsection, .greeting2 {
     color: grey;
+    font-size: 2.5rem !important;
 }
 .highlight, .greeting {
     color: #fff !important;  
+    font-size: 3rem !important;
 }
 .desc {
     line-height: 22px;
@@ -63,5 +67,47 @@
 .headshot{
     border-radius: 50%;
     width: 40%;
-    margin-left: 10rem;
+}
+
+.techstack {
+    width: 100%;
+    max-width: 992px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: 3rem;
+    .type {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-flow: nowrap;
+        .title {
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0;
+            margin-bottom: 12px;
+        }
+        .icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 0 2rem;
+        }
+        .single-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 24px 24px 0;
+        }
+        .icon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+    }
 }
