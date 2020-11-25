@@ -13,5 +13,55 @@
         font-size: 14px;
         text-transform: uppercase;
         text-align: center;
+        cursor: crosshair;
     }
+}
+.modal {
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    left: 55%;
+    height: 90%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+}
+.ReactModal__Content.ReactModal__Content--after-open.modal:focus, .aboutme:focus {
+    outline: 0 !important;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .95);
+    height: 100vh;
+}
+
+.aboutme {
+    display: flex;
+    font-family: 'Josefin Sans', sans-serif;
+    place-items: center;
+    padding: 9rem;
+}
+.headsection, .greeting2 {
+    color: grey;
+}
+.highlight, .greeting {
+    color: #fff !important;  
+}
+.desc {
+    line-height: 22px;
+    color: grey;
+}
+.subsection {
+    display: inline-flex;
+    flex-direction: column;
+    width: 50%;
+}
+.headshot{
+    border-radius: 50%;
+    width: 40%;
+    margin-left: 10rem;
 }

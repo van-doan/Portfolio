@@ -56,7 +56,7 @@
         opacity: 1;
     }
     .video-container {
-        height: 325px;
+        height: 300px;
         position: absolute;
         bottom: .5%;
         left: 0;
@@ -87,6 +87,10 @@
 }
 
 // F U L L P A G E   S T Y L E   T W E A K S //
+#fp-nav {
+    top: 42%;
+}
+
 #fp-nav ul li .fp-tooltip {
     font-family: 'Barlow', sans-serif !important;
     text-transform: uppercase !important;
@@ -106,6 +110,7 @@
     margin-top: 3rem !important;
 }
 
+// H O M E   N A V   S T Y L I N G //
 .home-nav {
         display: flex;
         position: absolute;
@@ -122,3 +127,25 @@
             letter-spacing: 2px;
         }
     }
+
+// P R O J E C T   P A G E   S T Y L E S //
+.fp-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-flow: nowrap;
+    .project-card {
+        height: 250px;
+        margin: 2rem 2rem;
+    }
+    .project-img {
+        height: 100%;
+        border-radius: 10px;
+        width: 480px;
+        opacity: .8;
+        filter: invert(0) !important;
+    }
+    .project-img:hover {
+        opacity: 1;
+    }
+}
