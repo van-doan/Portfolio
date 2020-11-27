@@ -30,17 +30,18 @@
     .contact-list{
         position: absolute;
         display: flex;
-        right: 1%;
+        right: 1.2%;
         justify-content: space-between;
         flex-direction: column;
-        top: 9%;
-        img {
-            filter: invert(1);
+        top: 12%;
+        svg {
             margin: 10px 0;
             opacity: .5;
+            color: grey;
         }
-        img:hover {
+        svg:hover {
             opacity: 1;
+            color: white;
         }
     }
     .v1-container {

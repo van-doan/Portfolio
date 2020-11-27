@@ -40,11 +40,12 @@
 }
 .about-section2 {
     text-align: center;
+    margin-right: -8rem;
 }
 .aboutme {
     display: flex;
     font-family: 'Josefin Sans', sans-serif;
-    place-items: center;
+    align-items: center;
     padding: 9rem;
 }
 .headsection, .greeting2 {
@@ -73,14 +74,14 @@
     width: 100%;
     max-width: 992px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-content: center;
     margin-top: 3rem;
     .type {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        display: block;
+        flex-direction: row;
+        justify-content: center;
         flex-flow: nowrap;
         .title {
             font-size: 24px;
@@ -91,23 +92,24 @@
         .icons {
             display: flex;
             flex-direction: row;
-            justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: center;
             margin: 0 2rem;
         }
         .single-icon {
+            display: table-cell;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin: 0 24px 24px 0;
+            margin: 3px 1rem;
         }
-        .icon {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 3px;
+        .label {
+            margin-top: 6px;
         }
     }
 }

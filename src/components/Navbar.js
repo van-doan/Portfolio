@@ -5,6 +5,9 @@ import Modal from 'react-modal';
 
 // M E D I A   I M P O R T S //
 import img from '../media/images/andy_headshot.jpeg'
+import { FaCss3Alt, FaHtml5, FaPython, FaSass, FaJs, FaReact } from "react-icons/fa";
+import { DiDjango, DiNodejsSmall, DiPostgresql, } from "react-icons/di";
+// import Express from '../media/icons/express-js.svg'
 
 Modal.setAppElement("#root");
 
@@ -47,51 +50,71 @@ const Navbar = () => {
               <img src={img} className="headshot"/>
               <div className="techstack">
                 <div className="type">
+                <h3 className="title">Recent Front-end</h3>
                   <div className="icons">
                     <div className="single-icon">
-                  <h2 className="title">Recent Front-end</h2>
                       <div className="icon">
-                      </div>
-                    <div className="single-icon">
-                      <div className="icon">
+                        <FaJs/>
+                      <div className="label">JS</div>
                       </div>
                     </div>
                     <div className="single-icon">
                       <div className="icon">
+                        <FaHtml5/>
+                      <div className="label">HTML5</div>
                       </div>
                     </div>
                     <div className="single-icon">
                       <div className="icon">
+                        <FaCss3Alt/>
+                      <div className="label">CSS3</div>
                       </div>
                     </div>
                     <div className="single-icon">
                       <div className="icon">
+                        <FaSass/>
+                      <div className="label">Sass</div>
+                      </div>
+                    </div>
+                    <div className="single-icon">
+                      <div className="icon">
+                        <FaReact/>
+                      <div className="label">React</div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>                
                 <div className="type">
+                  <h3 className="title">Recent Back-end</h3>
                     <div className="icons">
                       <div className="single-icon">
-                  <h2 className="title">Recent Back-end</h2>
                         <div className="icon">
+                          <FaPython/>
+                          <div className="label">Python</div>
                         </div>
                       </div>
                       <div className="single-icon">
                         <div className="icon">
+                          <DiDjango/>
+                        <div className="label">Django</div>
                         </div>
                       </div>
                       <div className="single-icon">
                         <div className="icon">
+                        <DiNodejsSmall/>
+                        <div className="label">Node.js</div>
                         </div>
                       </div>
+                      {/* <div className="single-icon">
+                        <div className="icon">
+                        
+                        <div className="label">Express</div>
+                        </div>
+                      </div> */}
                       <div className="single-icon">
                         <div className="icon">
-                        </div>
-                      </div>
-                      <div className="single-icon">
-                        <div className="icon">
-                        </div>
+                          <DiPostgresql/>
+                        <div className="label">Postgresql</div>
                       </div>
                     </div>
                   </div>

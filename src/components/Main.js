@@ -5,10 +5,8 @@ import ReactFullpage from '@fullpage/react-fullpage';
 // import {CARD_LICENSE_KEY} from '../.env/key'
 
 // Importing Media
+import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import video from '../media/video/van-doan-loop.mp4';
-import gh from '../media/images/gh-icon.png';
-import li from '../media/images/li-icon.png';
-import mail from '../media/images/mail-icon.png';
 import arrow from '../media/images/down-arrow.png';
 import p1 from '../media/images/pokegotchi-main-screen.png'
 import p2 from '../media/images/wayfarer-city.png'
@@ -62,9 +60,9 @@ const Main = () => (
           </video>
         </div>
       <div className="contact-list">
-        <img src={mail} alt="email"/>
-        <img src={gh} alt="github"/>
-        <img src={li} alt="linkedin"/>
+        <a className="contact-icon" href="mailto:van-doan@outlook.com"><FaEnvelope/></a>
+        <a className="contact-icon"  href="https://github.com/van-doan"><FaGithub /></a>
+        <a className="contact-icon"  href="https://www.linkedin.com/in/andyvdoan/"><FaLinkedin /></a>
       </div>
       <div className="v1-container"></div>
         <div className="arrow-div">
