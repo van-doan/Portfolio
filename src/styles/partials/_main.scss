@@ -57,7 +57,7 @@
         opacity: 1;
     }
     .video-container {
-        height: 300px;
+        height: 250px;
         position: absolute;
         bottom: .5%;
         left: 0;
@@ -136,13 +136,13 @@
     justify-content: center;
     flex-flow: nowrap;
     .project-card {
-        height: 250px;
+        height: 200px;
         margin: 2rem 2rem;
     }
     .project-img {
         height: 100%;
         border-radius: 10px;
-        width: 480px;
+        width: 400px;
         opacity: .8;
         filter: invert(0) !important;
     }
