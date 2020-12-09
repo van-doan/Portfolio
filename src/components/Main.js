@@ -49,7 +49,7 @@ const Main = () => (
       <div className="section" id="section1">
         <div className="title-content">
           <h1 className="name">van doan</h1>
-          <h2 className="desc-one">marketing ops / software engineer</h2>
+          <h2 className="desc-one">creative tech / software engineer</h2>
           <h3 className="desc-two">based in Chicago</h3>
         </div>
         <div className="dark-mode-switch">
@@ -78,21 +78,103 @@ const Main = () => (
           <div className="projects-container">
             <div className="project-card">
               <div className="project-img">
-                <img data-src={p1} className="project-img" /> 
-              </div>
-              <div className="proj-container">
+                <div className="proj-title-container">
+                  <h2 className="proj-title">Pokegotchi</h2>
+                </div> 
+                <img data-src={p1} className="project-img" alt="" />
+                <div className="proj-container">
+                  <div className="proj">
+                    <div className="proj-line-container"></div>
+                    <div className="proj-line-text">
+                      <a className="proj-a" href="#">
+                        <h4 className="proj-text">Info</h4>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="proj">
+                    <div className="proj-line-container2"></div>
+                    <div className="proj-line-text">
+                      <a className="proj-a" href="#">
+                        <h4 className="proj-text">Code</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>   
             <div className="project-card">
-              <img data-src={p2} className="project-img" /> 
+              <div className="proj-title-container">
+                <h2 className="proj-title">EO Wayfarer</h2>
+              </div>
+              <img data-src={p2} className="project-img" alt="" /> 
+              <div className="proj-container">
+                  <div className="proj">
+                    <div className="proj-line-container"></div>
+                    <div className="proj-line-text">
+                      <a className="proj-a" href="#">
+                        <h4 className="proj-text">Info</h4>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="proj">
+                    <div className="proj-line-container2"></div>
+                    <div className="proj-line-text">
+                      <a className="proj-a" href="#">
+                        <h4 className="proj-text">Code</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
             </div> 
           </div> 
           <div className="projects-container">
             <div className="project-card">
-              <img data-src={p3} className="project-img" /> 
+              <div className="proj-title-container">
+                <h2 className="proj-title">Flixr</h2>
+              </div>
+              <img data-src={p3} className="project-img" alt="" /> 
+              <div className="proj-container">
+                  <div className="proj">
+                    <div className="proj-line-container"></div>
+                    <div className="proj-line-text">
+                      <a className="proj-a" href="#">
+                        <h4 className="proj-text">Info</h4>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="proj">
+                    <div className="proj-line-container2"></div>
+                    <div className="proj-line-text">
+                      <a className="proj-a" href="#">
+                        <h4 className="proj-text">Code</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
             </div>  
-            <div className="project-card">
-              <img data-src={p4} className="project-img" /> 
+            <div className="project-card">            
+              <div className="proj-title-container">
+                <h2 className="proj-title">Etelage</h2>
+              </div>
+              <img data-src={p4} className="project-img" alt="" /> 
+              <div className="proj-container">
+                  <div className="proj">
+                    <div className="proj-line-container"></div>
+                    <div className="proj-line-text">
+                      <a className="proj-a" href="#">
+                        <h4 className="proj-text">Info</h4>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="proj">
+                    <div className="proj-line-container2"></div>
+                    <div className="proj-line-text">
+                      <a className="proj-a" href="#">
+                        <h4 className="proj-text">Code</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
             </div>  
           </div>
         </div>

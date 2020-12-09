@@ -40,11 +40,11 @@ const App = () => {
     <>
     <Navbar />
     <Main />
-    <div className="dark-mode-switch">
+    {/* <div className="dark-mode-switch">
     <FormControlLabel
       control={toggleTheme}
     />
-    </div>
+    </div> */}
     </>
   )  
 }

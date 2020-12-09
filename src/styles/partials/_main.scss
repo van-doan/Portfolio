@@ -89,7 +89,7 @@
 
 // F U L L P A G E   S T Y L E   T W E A K S //
 #fp-nav {
-    top: 42%;
+    top: 45% !important;
 }
 
 #fp-nav ul li .fp-tooltip {
@@ -108,7 +108,9 @@
     font-family: 'Poiret One', cursive;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 3rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 // H O M E   N A V   S T Y L I N G //
@@ -134,19 +136,65 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-flow: nowrap;
+    flex-flow: wrap;
     .project-card {
-        height: 200px;
-        margin: 2rem 2rem;
+        height: 250px;
+        margin: 4rem 3rem;
+        display: flex;
+        flex-direction: column;
     }
     .project-img {
         height: 100%;
         border-radius: 10px;
-        width: 400px;
+        width: 450px;
         opacity: .8;
         filter: invert(0) !important;
     }
     .project-img:hover {
         opacity: 1;
+    }
+    .proj-title {
+        margin: -.8rem 0;
+        display: flex;
+        position: relative;
+        z-index: 2;
+        justify-content: center;
+        font-family: 'Trykker', serif;
+        font-size: 30px;
+        mix-blend-mode: difference;
+    }
+    .proj-container {
+        display: flex;
+        flex-direction: column;
+        flex-flow: wrap;
+        justify-content: flex-end;
+    }
+    .proj {
+        flex-direction: column;
+        display: flex;
+        width: 30px;
+        align-items: center;
+    }
+    .proj-line-container, .proj-line-container2 {
+        border-bottom: solid;
+        border-bottom-width: thin;
+        width: 30px;
+        transform: rotate(90deg);
+    }
+    .proj-line-text {
+        transform: rotate(90deg);
+        width: 20%;
+        margin: 1em 0;
+    }
+    .proj-text {
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: 14px;
+        font-family: 'Barlow';
+    }
+    .proj-a {
+        color: white;
+        text-decoration: none;
     }
 }

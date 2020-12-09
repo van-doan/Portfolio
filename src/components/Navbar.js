@@ -13,14 +13,16 @@ Modal.setAppElement("#root");
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [status, setText] = useState(false);
 
   function toggleModal() {
     setIsOpen(!isOpen);
+    setText(!status);
   }
 
   return (
     <nav className="about-modal">
-      <a className="about" onClick={toggleModal}>About</a>
+      <a className="about" onClick={toggleModal}>{status ? 'CLOSE' : 'ABOUT'}</a>
       <Modal 
         isOpen={isOpen}
         overlayClassName="modal-overlay"
