@@ -49,7 +49,7 @@ const Main = () => (
       <div className="section" id="section1">
         <div className="title-content">
           <h1 className="name">van doan</h1>
-          <h2 className="desc-one">creative tech / software engineer</h2>
+          <h2 className="desc-one">marketing ops / software engineer</h2>
           <h3 className="desc-two">based in Chicago</h3>
         </div>
         <div className="dark-mode-switch">
