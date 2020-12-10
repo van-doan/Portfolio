@@ -234,3 +234,18 @@
         text-decoration: none;
     }
 }
+
+.generic-footer {
+    display: flex;
+    position: absolute;
+    bottom: 3%;
+    left: 45%;
+    width: 100%;
+    @include sm {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        width: 100%;
+    }
+}

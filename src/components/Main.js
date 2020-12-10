@@ -1,6 +1,7 @@
 // Functional Imports
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
+import Footer from './Footer';
 
 // import {CARD_LICENSE_KEY} from '../.env/key'
 
@@ -179,6 +180,7 @@ const Main = () => (
             </div>  
           </div>
         </div>
+      <Footer />
       </div>
     </div>
     </ReactFullpage.Wrapper>
