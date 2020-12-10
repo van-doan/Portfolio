@@ -11,10 +11,10 @@ import arrow from '../media/images/down-arrow.png';
 import p1 from '../media/images/pokegotchi-main-screen.png'
 import p2 from '../media/images/wayfarer-city.png'
 import p3 from '../media/images/flixr-playlist.png'
-import p4 from '../media/images/happy-ghost.png'
+import p4 from '../media/images/etelage-search.png'
 
 
-const anchors = ["Intro", "Projects", "Art"];
+const anchors = ["Intro", "Projects"];
 const pluginWrapper = () => {
   require('../static/fullpage.cards.min');
 };
@@ -38,6 +38,7 @@ const Main = () => (
   controlArrows = {false}
   lazyLoading = {true}
 
+  scrollOverflow={true}
 
   // License Key ** After Deployment **
   // licenseKey = {CARD_LICENSE_KEY}
@@ -60,9 +61,9 @@ const Main = () => (
           </video>
         </div>
       <div className="contact-list">
-        <a className="contact-icon" href="mailto:van-doan@outlook.com"><FaEnvelope/></a>
-        <a className="contact-icon"  href="https://github.com/van-doan"><FaGithub /></a>
-        <a className="contact-icon"  href="https://www.linkedin.com/in/andyvdoan/"><FaLinkedin /></a>
+        <a className="contact-icon" target="_blank" href="mailto:van-doan@outlook.com"><FaEnvelope/></a>
+        <a className="contact-icon" target="_blank" href="https://github.com/van-doan"><FaGithub /></a>
+        <a className="contact-icon" target="_blank" href="https://www.linkedin.com/in/andyvdoan/"><FaLinkedin /></a>
       </div>
       <div className="v1-container"></div>
         <div className="arrow-div">
@@ -81,7 +82,7 @@ const Main = () => (
                 <div className="proj-title-container">
                   <h2 className="proj-title">Pokegotchi</h2>
                 </div> 
-                <img data-src={p1} className="project-img" alt="" />
+                <a className="project-link" target="_blank" href="https://pokegotchi-app.herokuapp.com/"><img data-src={p1} className="project-img" alt="" /></a>
                 <div className="proj-container">
                   <div className="proj">
                     <div className="proj-line-container"></div>
@@ -106,7 +107,7 @@ const Main = () => (
               <div className="proj-title-container">
                 <h2 className="proj-title">EO Wayfarer</h2>
               </div>
-              <img data-src={p2} className="project-img" alt="" /> 
+              <a className="project-link" target="_blank" href="https://eo-wayfarer.herokuapp.com/"><img data-src={p2} className="project-img" alt="" /></a> 
               <div className="proj-container">
                   <div className="proj">
                     <div className="proj-line-container"></div>
@@ -119,7 +120,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container2"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" href="#">
+                      <a className="proj-a" target="_blank" href="#">
                         <h4 className="proj-text">Code</h4>
                       </a>
                     </div>
@@ -132,7 +133,7 @@ const Main = () => (
               <div className="proj-title-container">
                 <h2 className="proj-title">Flixr</h2>
               </div>
-              <img data-src={p3} className="project-img" alt="" /> 
+              <a className="project-link" target="_blank" href="https://flixr.herokuapp.com/"><img data-src={p3} className="project-img" alt="" /></a>
               <div className="proj-container">
                   <div className="proj">
                     <div className="proj-line-container"></div>
@@ -145,7 +146,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container2"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" href="#">
+                      <a className="proj-a" target="_blank" href="#">
                         <h4 className="proj-text">Code</h4>
                       </a>
                     </div>
@@ -169,7 +170,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container2"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" href="#">
+                      <a className="proj-a" target="_blank" href="#">
                         <h4 className="proj-text">Code</h4>
                       </a>
                     </div>

@@ -12,7 +12,7 @@ import Navbar from './components/Navbar';
 // import { LICENSE_KEY, CARD_LICENSE_KEY } from '../.env/key';
 
 // MATERIAL.UI IMPORTS
-import FormControlLabel from "@material-ui/core/FormControlLabel";
+// import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
 
 const App = () => {

@@ -41,11 +41,24 @@ const Navbar = () => {
               </div>
               <div className="subsection">
                 <h3>Education</h3>
-                <p className="subdesc">Text text text</p>
+                <p className="subdesc">Software Engineering Immersive</p>
+                <span className="exp-desc">at General Assembly</span>
+                <span className="exp-date">Aug-Dec 2020</span>
+                <p className="subdesc">Masters in IO Psychology</p>
+                <span className="exp-desc">The Chicago School of Professional Psychology</span>
+                <span className="exp-date">2016-2018</span>
+                <p className="subdesc">BS in Psyhology/Biology</p>
+                <span className="exp-desc">Berry College</span>
+                <span className="exp-date">2012-2016</span>
               </div>
               <div className="subsection">
               <h3>Experience</h3>
-                <p className="subdesc">Text text text</p>
+                <p className="subdesc">Director of Business Development</p>
+                <span className="exp-desc">at <a className="company-link" href="www.six4creative.com">SIX4Creative</a></span>
+                <span className="exp-date">July 2020-Current</span>
+                <p className="subdesc">Growth Associate</p>
+                <span className="exp-desc">at <a className="company-link" href="www.ridewithvia.com">Via Transportation</a></span>
+                <span className="exp-date">2017-2020</span>
               </div>
             </div>
             <div className="about-section2">

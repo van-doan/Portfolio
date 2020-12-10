@@ -3,6 +3,8 @@
 // font-family: 'Catamaran', sans-serif;
 // font-family: 'Poiret One', cursive;
 
+@import "./mixins";
+
 .content {
     font-family: 'Poiret One', cursive;
     text-transform: uppercase;
@@ -34,10 +36,18 @@
         justify-content: space-between;
         flex-direction: column;
         top: 12%;
+        @include sm {
+            right: 39%;
+            top: 2%;
+            flex-direction: row;
+        }
         svg {
             margin: 10px 0;
             opacity: .5;
             color: grey;
+            @include sm{
+                margin: 0 5px;
+            }
         }
         svg:hover {
             opacity: 1;
@@ -55,6 +65,9 @@
         border-color: #fff;
         border-width: 0.5px;
         opacity: 1;
+        @include sm {
+            visibility: hidden;
+        }
     }
     .video-container {
         height: 250px;
@@ -90,6 +103,13 @@
 // F U L L P A G E   S T Y L E   T W E A K S //
 #fp-nav {
     top: 45% !important;
+    @include sm {
+        visibility: hidden !important;
+    }
+}
+
+.fp-tooltip.fp-right {
+    transform: rotate(90deg);
 }
 
 #fp-nav ul li .fp-tooltip {
@@ -120,6 +140,11 @@
         width: 100%;
         justify-content: center;
         top: 5%;
+        @include sm {
+            top: 1%;
+            left: 2%;
+            justify-content: flex-start;
+        }
         .home {
             text-align: center;
             background-color: transparent;
@@ -132,6 +157,12 @@
     }
 
 // P R O J E C T   P A G E   S T Y L E S //
+.content1 {
+    @include sm {
+        margin: 4rem 0;
+    }
+}
+
 .fp-content {
     display: flex;
     flex-direction: column;
@@ -140,7 +171,6 @@
     .project-card {
         height: 250px;
         margin: 4rem 3rem;
-        display: flex;
         flex-direction: column;
     }
     .project-img {
@@ -149,12 +179,15 @@
         width: 450px;
         opacity: .8;
         filter: invert(0) !important;
+        @include sm{
+            width: 400px;
+        }
     }
     .project-img:hover {
         opacity: 1;
     }
     .proj-title {
-        margin: -.8rem 0;
+        margin: -1.2rem 0;
         display: flex;
         position: relative;
         z-index: 2;
@@ -168,6 +201,9 @@
         flex-direction: column;
         flex-flow: wrap;
         justify-content: flex-end;
+        @include sm {
+            justify-content: center;
+        }
     }
     .proj {
         flex-direction: column;
@@ -190,7 +226,7 @@
         margin-left: 0;
         margin-bottom: 0;
         margin-top: 0;
-        font-size: 14px;
+        font-size: 12px;
         font-family: 'Barlow';
     }
     .proj-a {
