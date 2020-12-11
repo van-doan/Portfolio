@@ -9,7 +9,6 @@ import { FaCss3Alt, FaHtml5, FaPython, FaSass, FaJs, FaReact } from "react-icons
 import { DiDjango, DiNodejsSmall, DiPostgresql } from "react-icons/di";
 // import Express from '../media/icons/express-js.svg'
 
-Modal.setAppElement("#root");
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +24,7 @@ const Navbar = () => {
       <a className="about" onClick={toggleModal}>{status ? 'CLOSE' : 'ABOUT'}</a>
       <Modal 
         isOpen={isOpen}
+        parentSelector={()=>document.querySelector('#fullpage')}
         overlayClassName="modal-overlay"
         className="modal"
         onRequestClose={toggleModal}

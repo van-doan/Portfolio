@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import Footer from './Footer';
 import Navbar from './Navbar';
 
+import {CARD_LICENSE_KEY, LICENSE_KEY} from '../.env/key'
+
 // Importing Media
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import video from '../media/video/van-doan-loop.mp4';
@@ -23,10 +25,10 @@ const pluginWrapper = () => {
 const Main = () => (
   <ReactFullpage
   // License Key ** After Deployment **
-  licenseKey = {'B704B792-98A34684-8C42BF52-DB5687F0'}
-  cardEffectKey = {'dmFuLWRvYW4uZGV2Xzh2alkyRnlaSE09ZlU2'}
-  // Required Extension Wrapper
   pluginWrapper = {pluginWrapper}
+  licenseKey = {LICENSE_KEY}
+  cardEffectKey = {CARD_LICENSE_KEY}
+  // Required Extension Wrapper
   // Page Navigation States
   anchors = {anchors}
   navigation = {true}
