@@ -27,7 +27,6 @@ const Main = () => (
   // License Key ** After Deployment **
   pluginWrapper = {pluginWrapper}
   licenseKey = {LICENSE_KEY}
-  cardsKey = {CARD_LICENSE_KEY}
   // Required Extension Wrapper
   // Page Navigation States
   anchors = {anchors}
@@ -37,6 +36,7 @@ const Main = () => (
   showActiveTooltip = {true}
   // Card States
   cards = {true}
+  cardsKey = {CARD_LICENSE_KEY}
   cardsOptions = {{perspective: 200, fadeContent: true, fadeBackground: true}}
 
   // Project Slides
