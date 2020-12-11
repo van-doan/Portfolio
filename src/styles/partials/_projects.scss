@@ -1,0 +1,116 @@
+.project-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    .home-nav{
+        font-family: 'Poiret One', cursive; 
+        .backtoHome {
+            color: #fff;
+        }
+    }
+    .tab-row {
+        margin-top: 9rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .col-tabs {
+        display: flex;
+        justify-content: center;
+        .project-tabs {
+            font-family: 'Trykker', serif;
+            border-bottom: solid;
+            border-bottom-width: thin;
+            padding-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .nav-link {
+            color: #fff;
+        }
+        .nav-link:hover{
+            text-decoration: underline;
+        }
+    }
+    .col-content {
+        margin-top: 2rem;
+    }
+    .proj-container {
+        font-family: 'Barlow', sans-serif;
+        margin-top: 2rem;
+        padding: 0 5rem;
+        .proj-header {
+            margin-bottom: 3rem;
+            .pheader {
+                font-family: 'Trykker', serif;
+            }
+            .pdesc {
+                margin: 1rem 0 2rem 0;
+                font-family: 'Trykker', serif;
+            }
+        }
+        .proj-button {
+            margin: 1rem 0;
+            display: flex;
+            .pbuttoncontainer {
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+                .pbutton {
+                    padding: 4px 12px;
+                    border: none;
+                    border-radius: 3px;
+                    .plink {
+                        font-size: 12px;
+                        color: #000;
+                    }
+                }
+            }
+            .pdiscretion {
+                display: flex;
+                font-style: italic;
+                font-size: .8rem;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: baseline;
+                margin: 0 1rem;
+                .pdisc {
+                    margin: 0;
+                }
+            }
+        }
+        .proj-carousel {
+            z-index: 0;
+            .proj-img {
+                border-radius: 3px;
+            }
+        }
+        .proj-description {
+            margin: 3rem 0;
+            .desc-header {
+                margin-top: 1rem;
+                font-size: 1.5rem;
+            }
+            .desc-content {
+                margin: 1rem 0 2rem;
+                .proj-icons {
+                    display: flex;
+                    flex-direction: row;
+                    .picon {
+                        margin: 0 1rem 0 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        svg {
+                            height: 18px !important;
+                            width: 18px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

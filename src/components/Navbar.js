@@ -6,7 +6,7 @@ import Modal from 'react-modal';
 // M E D I A   I M P O R T S //
 import img from '../media/images/andy_headshot.jpeg'
 import { FaCss3Alt, FaHtml5, FaPython, FaSass, FaJs, FaReact } from "react-icons/fa";
-import { DiDjango, DiNodejsSmall, DiPostgresql, } from "react-icons/di";
+import { DiDjango, DiNodejsSmall, DiPostgresql } from "react-icons/di";
 // import Express from '../media/icons/express-js.svg'
 
 Modal.setAppElement("#root");

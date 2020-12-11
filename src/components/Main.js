@@ -1,9 +1,11 @@
 // Functional Imports
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
+import { Link } from 'react-router-dom'
 import Footer from './Footer';
+import Navbar from './Navbar';
 
-// import {CARD_LICENSE_KEY} from '../.env/key'
+import {CARD_LICENSE_KEY, LICENSE_KEY} from '../.env/key'
 
 // Importing Media
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
@@ -22,6 +24,9 @@ const pluginWrapper = () => {
 
 const Main = () => (
   <ReactFullpage
+  // License Key ** After Deployment **
+  licenseKey = {LICENSE_KEY}
+  cardEffectKey = {CARD_LICENSE_KEY}
   // Required Extension Wrapper
   pluginWrapper = {pluginWrapper}
   // Page Navigation States
@@ -41,12 +46,11 @@ const Main = () => (
 
   scrollOverflow={true}
 
-  // License Key ** After Deployment **
-  // licenseKey = {CARD_LICENSE_KEY}
   
   render={({ state, fullpageApi }) => {
     return (
     <ReactFullpage.Wrapper>
+      <Navbar/>
     <div id="fullpage-wrapper" class="content">
       <div className="section" id="section1">
         <div className="title-content">
@@ -88,9 +92,9 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" href="#">
+                      <Link to="/work/projects" className="proj-a">
                         <h4 className="proj-text">Info</h4>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="proj">
@@ -113,7 +117,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" href="#">
+                      <a className="proj-a" href="/work/projects">
                         <h4 className="proj-text">Info</h4>
                       </a>
                     </div>
