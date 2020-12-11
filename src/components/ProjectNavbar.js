@@ -34,7 +34,7 @@ const ProjectNavbar = () => {
 
   return(
     <div className="fixed-home" style={{...navbarStyles, top: visible ? '4rem' : '-60px'}}>
-          <h2 className="home-nav">
+          <h2 className="projects-nav">
             <Link to="/" className="backtoHome">VAN DOAN</Link>
           </h2>
         </div>

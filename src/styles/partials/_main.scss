@@ -26,6 +26,18 @@
         font-size: 16px;
         color: rgb(141, 141, 141);
     }
+    .name {
+        a{
+        color: white;
+        }
+        a:hover {
+            text-decoration: none !important;
+        }
+        @include sm {
+            line-height: 72px;
+            padding-bottom: 2rem;
+        }
+    }
     .desc-two {
         margin-bottom: 12rem !important;
     }
@@ -146,6 +158,9 @@
             left: 2%;
             justify-content: flex-start;
         }
+        @include mb {
+            top: 2%;
+        }
         .home {
             text-align: center;
             background-color: transparent;
@@ -245,7 +260,7 @@
     @include sm {
         display: flex;
         position: absolute;
-        bottom: 0;
+        bottom: 20px;
         left: 25%;
         width: 100%;
     }

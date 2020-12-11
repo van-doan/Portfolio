@@ -1,10 +1,12 @@
+@import "./mixins";
+
 .project-container {
     display: flex;
     height: 100vh;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    .home-nav{
+    .projects-nav{
         font-family: 'Poiret One', cursive; 
         .backtoHome {
             color: #fff;
@@ -15,6 +17,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
     .col-tabs {
         display: flex;
@@ -41,6 +44,9 @@
         font-family: 'Barlow', sans-serif;
         margin-top: 2rem;
         padding: 0 5rem;
+        @include sm {
+            padding: 0 1rem !important;
+        }
         .proj-header {
             margin-bottom: 3rem;
             .pheader {
@@ -54,6 +60,10 @@
         .proj-button {
             margin: 1rem 0;
             display: flex;
+            @include sm {
+                flex-direction: column !important;
+                align-content: center;
+            }
             .pbuttoncontainer {
                 align-items: center;
                 justify-content: center;
@@ -77,6 +87,9 @@
                 justify-content: flex-end;
                 align-items: baseline;
                 margin: 0 1rem;
+                @include sm {
+                    margin: 1rem 1rem;
+                }
                 .pdisc {
                     margin: 0;
                 }

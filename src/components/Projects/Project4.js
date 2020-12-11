@@ -14,7 +14,7 @@ import { ReactComponent as ExpressJs} from '../../media/icons/expressjs.svg'
 
 const Project4 = () => {
   return(
-    <Container 
+    <Container fluid
       className="proj-container">
       <div className="proj-header">
         <h1 className="pheader">ETELAGE</h1>
@@ -38,8 +38,10 @@ const Project4 = () => {
           <Carousel.Item>
             <video
               autoPlay 
+              playsInline
               muted 
               loop
+              controls={false}
               className="proj-img d-block w-100"
               alt="Slide 1">
               <source 

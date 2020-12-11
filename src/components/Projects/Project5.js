@@ -12,7 +12,7 @@ import { SiFirebase } from "react-icons/si";
 
 const Project5 = () => {
   return(
-    <Container 
+    <Container fluid
       className="proj-container">
       <div className="proj-header">
         <h1 className="pheader">VAN DOAN</h1>

@@ -2,7 +2,7 @@
 // MEDIA BREAKPOINTS //
 ///////////////////////
 // Small tablets and large smartphones (landscape view)
-$screen-sm-min: 375px;
+$screen-sm-min: 414px;
 
 // Small tablets (portrait view)
 $screen-md-min: 768px;
@@ -12,6 +12,8 @@ $screen-lg-min: 992px;
 
 // Large tablets and desktops
 $screen-xl-min: 1200px;
+
+$screen-macbook-h: 800px;
 
 ////////////
 // MIXINS //
@@ -42,4 +44,10 @@ $screen-xl-min: 1200px;
     @media (min-width: #{$screen-xl-min}) {
         @content;
     }
+ }
+
+ @mixin mb {
+     @media (max-height: #{$screen-macbook-h}) {
+         @content;
+     }
  }

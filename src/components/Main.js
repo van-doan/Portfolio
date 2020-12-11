@@ -15,6 +15,7 @@ import p1 from '../media/images/pokegotchi-main-screen.png'
 import p2 from '../media/images/wayfarer-city.png'
 import p3 from '../media/images/flixr-playlist.png'
 import p4 from '../media/images/etelage-search.png'
+import p5 from '../media/images/vandoan-projects.png'
 
 
 const anchors = ["Intro", "Projects"];
@@ -35,8 +36,8 @@ const Main = () => (
   scrollingSpeed = {600}
   showActiveTooltip = {true}
   // Card States
-  cards = {true}
   cardsKey = {CARD_LICENSE_KEY}
+  cards = {true}
   cardsOptions = {{perspective: 200, fadeContent: true, fadeBackground: true}}
 
   // Project Slides
@@ -45,6 +46,7 @@ const Main = () => (
   lazyLoading = {true}
 
   scrollOverflow={true}
+  
 
   
   render={({ state, fullpageApi }) => {
@@ -54,21 +56,27 @@ const Main = () => (
     <div id="fullpage-wrapper" class="content">
       <div className="section" id="section1">
         <div className="title-content">
-          <h1 className="name">van doan</h1>
+          <h1 className="name"><a href="/">van doan</a></h1>
           <h2 className="desc-one">creative tech / software engineer</h2>
           <h3 className="desc-two">based in Chicago</h3>
         </div>
         <div className="dark-mode-switch">
         </div>
         <div className="video-container">
-          <video id="video" autoPlay muted loop data-keepplaying>
+          <video id="video" 
+          controls={false}
+          playsInline 
+          autoPlay 
+          muted 
+          loop 
+          data-keepplaying>
             <source data-src={video} type="video/mp4"></source>
           </video>
         </div>
       <div className="contact-list">
-        <a className="contact-icon" target="_blank" href="mailto:van-doan@outlook.com"><FaEnvelope/></a>
-        <a className="contact-icon" target="_blank" href="https://github.com/van-doan"><FaGithub /></a>
-        <a className="contact-icon" target="_blank" href="https://www.linkedin.com/in/andyvdoan/"><FaLinkedin /></a>
+        <a className="contact-icon" target="_blank" rel="noreferrer" href="mailto:van-doan@outlook.com"><FaEnvelope/></a>
+        <a className="contact-icon" target="_blank" rel="noreferrer" href="https://github.com/van-doan"><FaGithub /></a>
+        <a className="contact-icon" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/andyvdoan/"><FaLinkedin /></a>
       </div>
       <div className="v1-container"></div>
         <div className="arrow-div">
@@ -87,7 +95,7 @@ const Main = () => (
                 <div className="proj-title-container">
                   <h2 className="proj-title">Pokegotchi</h2>
                 </div> 
-                <a className="project-link" target="_blank" href="https://pokegotchi-app.herokuapp.com/"><img data-src={p1} className="project-img" alt="" /></a>
+                <a className="project-link" target="_blank" rel="noreferrer" href="https://pokegotchi-app.herokuapp.com/"><img data-src={p1} className="project-img" alt="" /></a>
                 <div className="proj-container">
                   <div className="proj">
                     <div className="proj-line-container"></div>
@@ -100,7 +108,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container2"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" href="#">
+                      <a className="proj-a" target="_blank" rel="noreferrer" href="https://github.com/van-doan/Pokegotchi">
                         <h4 className="proj-text">Code</h4>
                       </a>
                     </div>
@@ -112,7 +120,7 @@ const Main = () => (
               <div className="proj-title-container">
                 <h2 className="proj-title">EO Wayfarer</h2>
               </div>
-              <a className="project-link" target="_blank" href="https://eo-wayfarer.herokuapp.com/"><img data-src={p2} className="project-img" alt="" /></a> 
+              <a className="project-link" target="_blank" rel="noreferrer" href="https://eo-wayfarer.herokuapp.com/"><img data-src={p2} className="project-img" alt="" /></a> 
               <div className="proj-container">
                   <div className="proj">
                     <div className="proj-line-container"></div>
@@ -125,7 +133,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container2"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" target="_blank" href="#">
+                      <a className="proj-a" target="_blank" rel="noreferrer" href="https://github.com/van-doan/EO-Wayfarer">
                         <h4 className="proj-text">Code</h4>
                       </a>
                     </div>
@@ -138,12 +146,12 @@ const Main = () => (
               <div className="proj-title-container">
                 <h2 className="proj-title">Flixr</h2>
               </div>
-              <a className="project-link" target="_blank" href="https://flixr.herokuapp.com/"><img data-src={p3} className="project-img" alt="" /></a>
+              <a className="project-link" target="_blank" rel="noreferrer" href="https://flixr.herokuapp.com/"><img data-src={p3} className="project-img" alt="" /></a>
               <div className="proj-container">
                   <div className="proj">
                     <div className="proj-line-container"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" href="#">
+                      <a className="proj-a" href="/work/projects">
                         <h4 className="proj-text">Info</h4>
                       </a>
                     </div>
@@ -151,7 +159,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container2"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" target="_blank" href="#">
+                      <a className="proj-a" target="_blank" rel="noreferrer" href="https://github.com/van-doan/Flixr">
                         <h4 className="proj-text">Code</h4>
                       </a>
                     </div>
@@ -167,7 +175,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" href="#">
+                      <a className="proj-a" href="/work/projects">
                         <h4 className="proj-text">Info</h4>
                       </a>
                     </div>
@@ -175,13 +183,39 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container2"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" target="_blank" href="#">
+                      <a className="proj-a" target="_blank" rel="noreferrer" href="https://github.com/van-doan/Etelage">
                         <h4 className="proj-text">Code</h4>
                       </a>
                     </div>
                   </div>
                 </div>
             </div>  
+          </div>
+          <div className="projects-container">
+            <div className="project-card">
+              <div className="proj-title-container">
+                <h2 className="proj-title">Van Doan</h2>
+              </div>
+              <a className="project-link" target="_blank" rel="noreferrer" href="https://van-doan.dev/"><img data-src={p5} className="project-img" alt="" style={{    borderStyle: 'solid', borderWidth:'thin', borderColor: "#fff"}}/></a>
+              <div className="proj-container">
+                  <div className="proj">
+                    <div className="proj-line-container"></div>
+                    <div className="proj-line-text">
+                      <a className="proj-a" href="/work/projects">
+                        <h4 className="proj-text">Info</h4>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="proj">
+                    <div className="proj-line-container2"></div>
+                    <div className="proj-line-text">
+                      <a className="proj-a" target="_blank" rel="noreferrer" href="https://github.com/van-doan/Portfolio">
+                        <h4 className="proj-text">Code</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
           </div>
         </div>
       <Footer />

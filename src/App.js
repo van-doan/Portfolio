@@ -1,13 +1,11 @@
 // GLOBAL IMPORTS
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
 
 // STYLES IMPORT
 import './styles/app.scss'
 
 // COMPONENT IMPORTS
-import Main from './components/Main';
-import Navbar from './components/Navbar';
 import Routes from './constants/Routes';
 
 // KEY IMPORT ** FOR ACTIVE DOMAIN **

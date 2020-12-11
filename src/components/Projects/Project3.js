@@ -15,7 +15,7 @@ import img5 from '../../media/images/wayfarer-city-articles.png'
 
 const Project3 = () => {
   return(
-    <Container 
+    <Container fluid
       className="proj-container">
       <div className="proj-header">
         <h1 className="pheader">EO-WAYFARER</h1>
