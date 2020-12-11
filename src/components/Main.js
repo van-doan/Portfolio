@@ -27,7 +27,7 @@ const Main = () => (
   // License Key ** After Deployment **
   pluginWrapper = {pluginWrapper}
   licenseKey = {LICENSE_KEY}
-  cardEffectKey = {CARD_LICENSE_KEY}
+  cardsKey = {CARD_LICENSE_KEY}
   // Required Extension Wrapper
   // Page Navigation States
   anchors = {anchors}
