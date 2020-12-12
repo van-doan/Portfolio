@@ -105,16 +105,20 @@ const Project3 = () => {
               <FaPython/>
               <div className="picon-label">Python</div>
             </div>
-            <div className="picon">
-              <DiPostgresql/>
-              <div className="picon-label">PostgreSQL</div>
-            </div>
-            <div className="picon">
-              <FaFigma/>
-              <div className="picon-label">Figma</div>
-            </div>
           </div>
         </p>
+        <p className="desc-content">
+            <div className="proj-icons">
+              <div className="picon">
+                <DiPostgresql/>
+                <div className="picon-label">PostgreSQL</div>
+              </div>
+              <div className="picon">
+                <FaFigma/>
+                <div className="picon-label">Figma</div>
+              </div>
+            </div>
+          </p>
       </div>
     </Container>
   )
