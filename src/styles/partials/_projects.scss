@@ -77,6 +77,9 @@
                     padding: 4px 12px;
                     border: none;
                     border-radius: 3px;
+                    @include sm {
+                        background-color: white;
+                    }
                     .plink {
                         font-size: 12px;
                         color: #000;
@@ -92,7 +95,9 @@
                 align-items: baseline;
                 margin: 0 1rem;
                 @include sm {
-                    margin: 1rem 1rem;
+                    margin: 1rem 1rem 2rem;
+                    display: flex;
+                    align-items: center;
                 }
                 .pdisc {
                     margin: 0;
