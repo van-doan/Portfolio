@@ -129,9 +129,21 @@
             .desc-header {
                 margin-top: 1rem;
                 font-size: 1.5rem;
+                @include md {
+                    font-size: 1.7rem !important;
+                }
+                @include lg {
+                    font-size: 2rem !important;
+                }
             }
             .desc-content {
                 margin: 1rem 0 2rem;
+                @include md {
+                    font-size: 1.3rem !important;
+                }
+                @include lg {
+                    font-size: 1.7rem !important;
+                }
                 .proj-icons {
                     display: flex;
                     flex-direction: row;
