@@ -75,8 +75,8 @@ const Project2 = () => {
         </p>
 
         <h2 className="desc-header">CHALLENGES</h2>
-        <p className="desc-content">Flixr is my second project where I pair-programmed with <a href="https://github.com/cooperama" className="cohort" rel="noreferrer" target="_blank">Jia Cooper</a>. Accessing the The Movie Database seemed to be the biggest challenge – this was solved using async/await Axios calls.</p>
-        <p className="desc-content">In the future, I'd like to configure this app to be mobile-response allowing users to search and create watchlists on the go.</p>
+        <p className="desc-content">Flixr is my second project where I pair-programmed with <a href="https://github.com/cooperama" className="cohort" rel="noreferrer" target="_blank">Jia Cooper</a>. Accessing The Movie Database seemed to be the biggest challenge – this was solved using async/await Axios calls.</p>
+        <p className="desc-content">In the future, I'd like to configure this app to be mobile-responsive allowing users to search and create watchlists on the go.</p>
 
         <h2 className="desc-header">TOOLS &amp; TECHNOLOGY</h2>
         <p className="desc-content">

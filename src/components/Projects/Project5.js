@@ -65,7 +65,8 @@ const Project5 = () => {
         </p>
 
         <h2 className="desc-header">CHALLENGES</h2>
-        <p className="desc-content">I started Van Doan in the middle of my bootcamp with General Assembly. At the time, I had limited knowledge on how to utilize React and implement the features I wanted. Firebase is also a new back-end technology that I implemented with this application. With what I've learned, I plan on continuously developing this piece to further incorporate future projects and other artistic ventures.</p>
+        <p className="desc-content">I started Van Doan in the middle of my bootcamp with General Assembly. At the time, I had limited knowledge on how to utilize React and implement the features I wanted. Firebase is also a new back-end technology that I implemented with this application.</p>
+        <p className="desc-content">With what I've learned, I plan on continuously developing this piece to further incorporate future projects and other artistic ventures.</p>
 
         <h2 className="desc-header">TOOLS &amp; TECHNOLOGY</h2>
         <p className="desc-content">

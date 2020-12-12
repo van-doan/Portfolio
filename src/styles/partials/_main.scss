@@ -154,7 +154,7 @@
         top: 5%;
         z-index:1;
         @include sm {
-            top: 1%;
+            top: .5%!important;
             left: 2%;
             justify-content: flex-start;
         }

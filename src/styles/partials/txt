@@ -1,8 +1,0 @@
-    @include sm {
-        border-bottom: solid;
-        border-width: thin;
-    }
-
-    @include md or lg {
-        font-size: 2rem;
-    }
