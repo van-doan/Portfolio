@@ -65,7 +65,7 @@ const Project1 = () => {
 
         <h2 className="desc-header">CHALLENGES</h2>
         <p className="desc-content">Pokégotchi is my first coding project where I had to navigate when and why events would be executed – which I solved with async/await functions and watching numerous tutorials.</p>
-        <p className="desc-content">Revisiting this project, I'd like to configure the entire app to be mobile-response with touch functionality for smart phone/tablet users.</p>
+        <p className="desc-content">Revisiting this project, I'd like to configure the entire app to be mobile-responsive with touch functionality for smart phone/tablet users.</p>
 
         <h2 className="desc-header">TOOLS &amp; TECHNOLOGY</h2>
         <p className="desc-content">

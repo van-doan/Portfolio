@@ -21,6 +21,9 @@ const Project5 = () => {
           <div className='pbuttoncontainer'>
             <button className="pbutton"><Link className="plink" to="/">SEE WEBSITE</Link></button>
           </div>
+          <div className="pdiscretion">
+            <p className="pdisc"></p>
+          </div>
         </div>
       </div>
       <Carousel

@@ -29,6 +29,9 @@
             padding-bottom: 2rem;
             display: flex;
             justify-content: center;
+            .proj-name:focus {
+                outline: none;
+            }
         }
         .nav-link {
             color: #fff;
@@ -50,11 +53,12 @@
         .proj-header {
             margin-bottom: 3rem;
             .pheader {
-                font-family: 'Trykker', serif;
+                font-family: 'Barlow', sans-serif;
+                font-weight: 600;
             }
             .pdesc {
                 margin: 1rem 0 2rem 0;
-                font-family: 'Trykker', serif;
+                font-family: 'Barlow', sans-serif;
             }
         }
         .proj-button {
