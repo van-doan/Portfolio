@@ -74,7 +74,7 @@ const Project4 = () => {
       </Carousel>
       <div className="proj-description">
         <h2 className="desc-header">BACKGROUND</h2>
-        <p className="desc-content">Etelage is a solo project created for users to learn and appreciate existing art and other user's aesthetic on a fully interactive platform. The concept is to allow users to search for artwork and curate their own exhibits and share with other users. Etelage accesses several APIs including the Harvard's Art Museum API, the MET Museum API, and Artsy's API allowing users access to several thousands of exhibits and artwork.</p>
+        <p className="desc-content">Etelage is a solo project created for users to learn and appreciate existing art and other user's aesthetic on a fully interactive platform. Etelage accesses several APIs including the Harvard's Art Museum API, the MET Museum API, and Artsy's API allowing users access to several thousands of exhibits and artwork.</p>
 
         <h2 className="desc-header">TARGET USERS</h2>
         <p className="desc-content">
@@ -87,7 +87,7 @@ const Project4 = () => {
 
         <h2 className="desc-header">CHALLENGES</h2>
         <p className="desc-content">Etelage was developed in less than 3 days leaving missing components and key pieces to the full immersive experience. With more time, the application would have all features mentioned with the ability for users to fully customize their exhibit experiences.</p>
-        <p className="desc-content">In the future, I plan on configuring the application to be a mobile-app, develop smart algorithms to better customize a user's feed, and incorporate further customization abilities for a user's immersive exhibit experience.</p>
+        <p className="desc-content">This project is still in development where I plan on configuring the application to be a mobile-app, develop smart algorithms to better customize a user's feed, and incorporate further customization abilities for a user's immersive exhibit experience.</p>
 
         <h2 className="desc-header">TOOLS &amp; TECHNOLOGY</h2>
         <p className="desc-content">

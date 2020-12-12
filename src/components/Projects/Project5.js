@@ -16,7 +16,7 @@ const Project5 = () => {
       className="proj-container">
       <div className="proj-header">
         <h1 className="pheader">VAN DOAN</h1>
-        <p className="pdesc">Van Doan is a constantly evolving portfolio created by Andy Van Doan. The intention of Van Doan is to market my brand, to exhibit technology I've recently utilized, and to display my programming experience &amp; work to the curious few willing to explore.</p>
+        <p className="pdesc">Van Doan is a constantly evolving portfolio created by Andy Van Doan (me). The intention of Van Doan is to market my brand, to exhibit technology I've recently utilized, and to display my ongoing programming experience &amp; work to the curious few willing to explore.</p>
         <div className="proj-button row flex-row">
           <div className='pbuttoncontainer'>
             <button className="pbutton"><Link className="plink" to="/">SEE WEBSITE</Link></button>
