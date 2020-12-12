@@ -40,7 +40,7 @@ const Navbar = () => {
                 <p className="desc">If you have any cool projects or opportunities, let's work together!</p>
               </div>
               <div className="subsection">
-                <h3>Education</h3>
+                <h4>Education</h4>
                 <p className="subdesc">Software Engineering Immersive</p>
                 <span className="exp-desc">at General Assembly</span>
                 <span className="exp-date">Aug-Dec 2020</span>
@@ -52,7 +52,7 @@ const Navbar = () => {
                 <span className="exp-date">2012-2016</span>
               </div>
               <div className="subsection">
-              <h3>Experience</h3>
+              <h4>Experience</h4>
                 <p className="subdesc">Director of Business Development</p>
                 <span className="exp-desc">at <a className="company-link" href="www.six4creative.com">SIX4Creative</a></span>
                 <span className="exp-date">July 2020-Current</span>

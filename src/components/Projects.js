@@ -22,7 +22,7 @@ const Projects = () => {
       className="tab-container"
       defaultActiveKey="first"
       >
-      <Row
+      <div
         className="tab-row">
         <Col
           className="col-tabs">
@@ -84,7 +84,7 @@ const Projects = () => {
           </Tab.Pane>
         </Tab.Content>
         </Col>
-      </Row>
+      </div>
     </Tab.Container>
     </Container>
   )

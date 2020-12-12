@@ -72,19 +72,33 @@
     color: grey;
     font-size: 2.5rem !important;
 }
+
+.headsection {
+    @include sm {
+        margin-bottom: 20px;
+    }
+}
 .highlight, .greeting {
     color: #fff !important;  
     font-size: 3rem !important;
 }
 .greeting, .greeting2 {
     @include sm {
-        margin: 0 0;   
-       }
+        margin: 10px 0;
+    }
+}
+.greeting, .greeting2, .highlight {
+    @include sm {
+        font-size: 2rem!important;
+    }
 }
 .desc {
     line-height: 22px;
     color: grey;
     margin: 8px;
+    @include sm {
+        margin: 8px 0;
+    }
 }
 .subsection {
     display: inline-flex;
@@ -97,7 +111,7 @@
 }
 .subdesc {
     @include sm {
-        margin: 0
+        margin: 0 !important;
     }
 }
 .exp-desc{
