@@ -55,17 +55,27 @@
             .pheader {
                 font-family: 'Barlow', sans-serif;
                 font-weight: 600;
+                @include md {
+                    margin-top: 2rem !important;
+                }
+                @include md {
+                    margin-top: 2rem !important;
+                }
             }
             .pdesc {
                 margin: 1rem 0 2rem 0;
                 font-family: 'Barlow', sans-serif;
+                @include md {
+                    font-size: 1.7rem !important;
+                }
+                @include lg {
+                    font-size: 2rem !important;
+                }
             }
         }
         .proj-button {
             margin: 1rem 0;
             display: flex;
-            border-bottom: solid;
-            border-width: thin;
             @include sm {
                 flex-direction: column !important;
                 align-content: center;
