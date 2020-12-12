@@ -111,16 +111,20 @@ const Project4 = () => {
               <FaReact/>
               <div className="picon-label">React</div>
             </div>
-            <div className="picon">
-              <DiNodejsSmall/>
-              <div className="picon-label">Node.js</div>
-            </div>
-            <div className="picon">
-              <FaFigma/>
-              <div className="picon-label">Figma</div>
-            </div>
           </div>
         </p>
+        <p className="desc-content">
+            <div className="proj-icons">
+              <div className="picon">
+                <DiNodejsSmall/>
+                <div className="picon-label">Node.js</div>
+              </div>
+              <div className="picon">
+                <FaFigma/>
+                <div className="picon-label">Figma</div>
+              </div>
+            </div>
+          </p>
       </div>
     </Container>
   )

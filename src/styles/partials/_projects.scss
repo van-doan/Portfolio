@@ -60,9 +60,13 @@
         .proj-button {
             margin: 1rem 0;
             display: flex;
+            border-bottom: solid;
+            border-width: thin;
             @include sm {
                 flex-direction: column !important;
                 align-content: center;
+                border-bottom: solid;
+                border-width: thin;
             }
             .pbuttoncontainer {
                 align-items: center;
