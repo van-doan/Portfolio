@@ -146,7 +146,7 @@ const Main = () => (
               <div className="proj-title-container">
                 <h2 className="proj-title">Flixr</h2>
               </div>
-              <a className="project-link" target="_blank" rel="noreferrer" href="https://flixr.herokuapp.com/"><img data-src={p3} className="project-img" alt="" /></a>
+              <a className="project-link" target="_blank" rel="noreferrer" href="https://flixr-io.herokuapp.com/"><img data-src={p3} className="project-img" alt="" /></a>
               <div className="proj-container">
                   <div className="proj">
                     <div className="proj-line-container"></div>

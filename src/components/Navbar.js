@@ -47,7 +47,7 @@ const Navbar = () => {
                 <p className="subdesc">Masters in IO Psychology</p>
                 <span className="exp-desc">The Chicago School of Professional Psychology</span>
                 <span className="exp-date">2016-2018</span>
-                <p className="subdesc">BS in Psyhology/Biology</p>
+                <p className="subdesc">BS in Psychology/Biology</p>
                 <span className="exp-desc">Berry College</span>
                 <span className="exp-date">2012-2016</span>
               </div>
