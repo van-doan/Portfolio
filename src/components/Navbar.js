@@ -54,10 +54,10 @@ const Navbar = () => {
               <div className="subsection">
               <h4>Experience</h4>
                 <p className="subdesc">Director of Business Development</p>
-                <span className="exp-desc">at <a className="company-link" href="www.six4creative.com">SIX4Creative</a></span>
+                <span className="exp-desc">at <a className="company-link" target="_blank" rel="noreferrer"  href="https://www.six4creative.com">SIX4Creative</a></span>
                 <span className="exp-date">July 2020-Current</span>
                 <p className="subdesc">Growth Associate</p>
-                <span className="exp-desc">at <a className="company-link" href="www.ridewithvia.com">Via Transportation</a></span>
+                <span className="exp-desc">at <a className="company-link" target="_blank" rel="noreferrer"  href="https://www.ridewithvia.com">Via Transportation</a></span>
                 <span className="exp-date">2017-2020</span>
               </div>
             </div>
