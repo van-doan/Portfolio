@@ -86,7 +86,7 @@ const Project4 = () => {
         </p>
 
         <h2 className="desc-header">CHALLENGES</h2>
-        <p className="desc-content">Etelage was developed in less than 3 days leaving missing components and key pieces to the full immersive experience. With more time, the application would have all features mentioned with the ability for users to fully customize their exhibit experiences.</p>
+        <p className="desc-content">Etelage was developed in less than 3 days (due to unexpected events that forced a pivot) leaving missing components and key pieces to the full immersive experience. With more time, the application would have all features mentioned with the ability for users to fully customize their exhibit experiences.</p>
         <p className="desc-content">This project is still in development where I plan on configuring the application to be a mobile-app, develop smart algorithms to better customize a user's feed, and incorporate further customization abilities for a user's immersive exhibit experience.</p>
 
         <h2 className="desc-header">TOOLS &amp; TECHNOLOGY</h2>

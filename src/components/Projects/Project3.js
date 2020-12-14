@@ -74,7 +74,7 @@ const Project3 = () => {
       </Carousel>
       <div className="proj-description">
         <h2 className="desc-header">BACKGROUND</h2>
-        <p className="desc-content">EO-Wayfarer (aka "Wayfarer") was created for aspiring travelers and active adventurers. EO-Wayfarer helps provide users with tips and location information for incredible getaway destinations. Additionally, the app aims to cultivate a community of travelers to share their experiences and advice for those looking to travel to the same location.</p>
+        <p className="desc-content">EO-Wayfarer (aka "Wayfarer") was created based on a client's prompt and suggested wireframes. The application is intended to help provide users with tips and location information for incredible getaway destinations while also cultivating a community where travelers are able to share their experiences and advice for those looking to travel to the same location.</p>
 
         <h2 className="desc-header">TARGET USERS</h2>
         <p className="desc-content">
@@ -84,8 +84,8 @@ const Project3 = () => {
           </p>
 
         <h2 className="desc-header">CHALLENGES</h2>
-        <p className="desc-content">EO-Wayfarer was a group project where I led 3 other members: <a href="https://github.com/j-blaz3" className="cohort" rel="noreferrer" target="_blank">Justin Blalock</a>, <a href="https://github.com/kihwan-lee" className="cohort" rel="noreferrer" target="_blank">Kihwan Lee</a>, and <a href="https://github.com/bservent" className="cohort" rel="noreferrer" target="_blank">Brittany Servent</a>. This was a challenge in itself but through consistent communication and task delegation, we were able to effectively fulfill the client prompt and deliver a stunning travel application.</p>
-        <p className="desc-content">In the future, I'd like to configure the app to be mobile-responsive and continue to build the internal API with restaurant, things-to-do, and places to stay data. Additionally, I'd like to integrate hotel, flight, and car rental services from external databases.</p>
+        <p className="desc-content">EO-Wayfarer was a group project where I led 3 other members: <a href="https://github.com/j-blaz3" className="cohort" rel="noreferrer" target="_blank">Justin Blalock</a>, <a href="https://github.com/kihwan-lee" className="cohort" rel="noreferrer" target="_blank">Kihwan Lee</a>, and <a href="https://github.com/bservent" className="cohort" rel="noreferrer" target="_blank">Brittany Servent</a>. This was a challenge in itself but through consistent communication and task delegation, we were able to effectively fulfill the client prompt, build an original API, and deliver a stunning travel application.</p>
+        <p className="desc-content">In the future, I'd like to configure the app to be completely responsive for all viewports and continue to add to the internal API with restaurant, things-to-do, and places to stay data. Additionally, I'd like to integrate hotel, flight, and car rental services from external databases.</p>
 
         <h2 className="desc-header">TOOLS &amp; TECHNOLOGY</h2>
         <p className="desc-content">

@@ -56,7 +56,7 @@ const Project1 = () => {
       </Carousel>
       <div className="proj-description">
         <h2 className="desc-header">BACKGROUND</h2>
-        <p className="desc-content">Pokégotchi incorporates earlier versions of Pokémon's load screen as the landing page. For the in-game interface, the GameBoy Color's structural design will serve as the main user interface. All art besides the background images on the landing page and the in-game interface is originally created.</p>
+        <p className="desc-content">Pokégotchi incorporates earlier versions of Pokémon's load screen as the landing page. For the in-game interface, the GameBoy Color's structural design will serve as the user's main point of focus. All art besides the background images on the landing page and the in-game interface is originally created.</p>
 
         <h2 className="desc-header">TARGET USERS</h2>
         <p className="desc-content">
@@ -65,7 +65,7 @@ const Project1 = () => {
 
         <h2 className="desc-header">CHALLENGES</h2>
         <p className="desc-content">Pokégotchi is my first coding project where I had to navigate when and why events would be executed – which I solved with async/await functions and watching numerous tutorials.</p>
-        <p className="desc-content">Revisiting this project, I'd like to configure the entire app to be mobile-responsive with touch functionality for smart phone/tablet users.</p>
+        <p className="desc-content">Revisiting this project, I'd like to configure the entire app to be completely responsive to all viewports with a focus on mobile devices incorporating touch functionality for smart phone/tablet users.</p>
 
         <h2 className="desc-header">TOOLS &amp; TECHNOLOGY</h2>
         <p className="desc-content">
