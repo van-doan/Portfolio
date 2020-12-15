@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
-import resume from '../media/doc/Andy_Updated_Resume_Dark.pdf';
+import resume from '../media/doc/andy-resume.pdf';
 
 // M E D I A   I M P O R T S //
 import img from '../media/images/andy_headshot.jpeg'
