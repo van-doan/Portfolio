@@ -16,6 +16,7 @@ import p2 from '../media/images/wayfarer-city.png'
 import p3 from '../media/images/flixr-playlist.png'
 import p4 from '../media/images/etelage-search.png'
 import p5 from '../media/images/vandoan-projects.png'
+import resume from '../media/doc/Andy_Updated_Resume_Dark.pdf'
 
 
 const anchors = ["Intro", "Projects"];
@@ -59,6 +60,7 @@ const Main = () => (
           <h1 className="name"><a href="/">van doan</a></h1>
           <h2 className="desc-one">creative tech / software engineer</h2>
           <h3 className="desc-two">based in Chicago</h3>
+          <h4 className="desc-three"><a href={resume} target="_blank">view resume</a></h4>
         </div>
         <div className="dark-mode-switch">
         </div>
