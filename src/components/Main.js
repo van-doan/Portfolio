@@ -60,7 +60,6 @@ const Main = () => (
           <h1 className="name"><a href="/">van doan</a></h1>
           <h2 className="desc-one">creative tech / software engineer</h2>
           <h3 className="desc-two">based in Chicago</h3>
-          <h4 className="desc-three"><a href={resume} target="_blank">view resume</a></h4>
         </div>
         <div className="dark-mode-switch">
         </div>

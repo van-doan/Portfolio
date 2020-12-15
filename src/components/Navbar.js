@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
+import resume from '../media/doc/Andy_Updated_Resume_Dark.pdf';
 
 // M E D I A   I M P O R T S //
 import img from '../media/images/andy_headshot.jpeg'
@@ -59,6 +60,7 @@ const Navbar = () => {
                 <p className="subdesc">Growth Associate</p>
                 <span className="exp-desc">at <a className="company-link" target="_blank" rel="noreferrer"  href="https://www.ridewithvia.com">Via Transportation</a></span>
                 <span className="exp-date">2017-2020</span>
+                <p className="subdesc"><a href={resume} target="_blank">View Full Resume</a></p>
               </div>
             </div>
             <div className="about-section2">
