@@ -66,7 +66,7 @@ const Project2 = () => {
       </Carousel>
       <div className="proj-description">
         <h2 className="desc-header">BACKGROUND</h2>
-        <p className="desc-content">Flixr was created for users who are in search of the perfect movie to watch but are overwhelmed with the variety of choices. Flixr's unique algorithm solves this issue by providing movie choices based on the users quiz results. The Flixr app accesses The Movie Database filtering over thousands of movies but only providing choices relevant to the user.</p>
+        <p className="desc-content">Flixr was created for users who are in search of the perfect movie to watch but are overwhelmed with the variety of choices. Flixr's unique algorithm solves this issue by providing movie choices based on the user's quiz results. The Flixr app accesses The Movie Database filtering over thousands of movies but only providing choices relevant to the user.</p>
 
         <h2 className="desc-header">TARGET USERS</h2>
         <p className="desc-content">
