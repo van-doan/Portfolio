@@ -99,7 +99,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container"></div>
                     <div className="proj-line-text">
-                      <Link to="/work/projects" className="proj-a">
+                      <Link to="/work/projects/pokegotchi" className="proj-a">
                         <h4 className="proj-text">Info</h4>
                       </Link>
                     </div>
@@ -124,7 +124,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" href="/work/projects">
+                      <a className="proj-a" href="/work/projects/eo-wayfarer">
                         <h4 className="proj-text">Info</h4>
                       </a>
                     </div>
@@ -150,7 +150,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" href="/work/projects">
+                      <a className="proj-a" href="/work/projects/flixr">
                         <h4 className="proj-text">Info</h4>
                       </a>
                     </div>
@@ -174,7 +174,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" href="/work/projects">
+                      <a className="proj-a" href="/work/projects/etelage">
                         <h4 className="proj-text">Info</h4>
                       </a>
                     </div>
@@ -200,7 +200,7 @@ const Main = () => (
                   <div className="proj">
                     <div className="proj-line-container"></div>
                     <div className="proj-line-text">
-                      <a className="proj-a" href="/work/projects">
+                      <a className="proj-a" href="/work/projects/portfolio">
                         <h4 className="proj-text">Info</h4>
                       </a>
                     </div>
