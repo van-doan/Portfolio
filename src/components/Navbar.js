@@ -35,7 +35,7 @@ const Navbar = () => {
               <div className="head-section">
                 <h1 className="greeting">Hello,</h1>
                 <h1 className="greeting2">I'm Andy <span className="highlight">Van Doan.</span></h1>
-                <p className="desc">I'm a Chicago-based, full-stack savvy software engineer.</p>
+                <p className="desc">I'm an Atlanta-based, full-stack savvy software engineer.</p>
                 <p className="desc">I design and build engaging, performant applications.</p>
                 <p className="desc">Machine learning and automation energize me.</p>
                 <p className="desc">If you have any cool projects or opportunities, let's work together!</p>
