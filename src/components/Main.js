@@ -57,7 +57,7 @@ const Main = () => (
         <div className="title-content">
           <h1 className="name"><a href="/">van doan</a></h1>
           <h2 className="desc-one">creative tech / software engineer</h2>
-          <h3 className="desc-two">based in Chicago</h3>
+          <h3 className="desc-two">based in Atlanta</h3>
         </div>
         <div className="dark-mode-switch">
         </div>
