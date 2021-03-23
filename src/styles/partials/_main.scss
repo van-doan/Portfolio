@@ -57,10 +57,17 @@
         justify-content: space-between;
         flex-direction: column;
         top: 12%;
+        animation: fadeIn ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        
         @include sm {
             right: 39%;
             top: 2%;
             flex-direction: row;
+            animation: fadeIn ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
         }
         svg {
             margin: 10px 0;
@@ -86,8 +93,14 @@
         border-color: #fff;
         border-width: 0.5px;
         opacity: 1;
+        animation: fadeIn ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
         @include sm {
             visibility: hidden;
+            animation: fadeIn ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
         }
     }
     .video-container {
@@ -102,6 +115,9 @@
         height: inherit;
         width: 100%;
         object-fit: cover;
+        animation: fadeIn ease 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
     }
     .arrow-div{
         position: absolute;
@@ -110,7 +126,10 @@
         width: 100%;
         z-index: 2;
         .arrow {
-            filter: invert(1)
+            filter: invert(1);
+            animation: fadeIn ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
         }
         .arrow:focus {
             outline: none;
@@ -131,6 +150,9 @@
 
 .fp-tooltip.fp-right {
     transform: rotate(90deg);
+    animation: fadeIn ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 #fp-nav ul li .fp-tooltip {

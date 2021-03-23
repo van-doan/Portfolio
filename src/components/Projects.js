@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import {NavLink, useRouteMatch, withRouter} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useRouteMatch, withRouter } from 'react-router-dom';
 import classNames from 'classnames';
 import ProjectNavbar from './ProjectNavbar'
 import Container from 'react-bootstrap/Container'
@@ -48,7 +48,7 @@ const Projects = (props) => {
               className={classNames({active : activeKey === 'pokegotchi'})}
               onClick={() => {toggle('pokegotchi');}}
               as= {NavLink}
-              to={`${url}/pokegotchi`}
+              to={`${url.slice(0,15)}${activeKey}`}
               eventKey="pokegotchi"
               exact
               >
@@ -63,7 +63,7 @@ const Projects = (props) => {
               className={classNames({active : activeKey === 'flixr'})}
               onClick={() => {toggle('flixr');}}
               as= {NavLink}
-              to={`${url}/flixr`}
+              to={`${url.slice(0,15)}${activeKey}`}
               eventKey="flixr"
               >
               FLIXR
@@ -77,7 +77,7 @@ const Projects = (props) => {
               className={classNames({active : activeKey === 'eo-wayfarer'})}
               onClick={() => {toggle('eo-wayfarer');}}
               as= {NavLink}
-              to={`${url}/eo-wayfarer`}
+              to={`${url.slice(0,15)}${activeKey}`}
               eventKey="eo-wayfarer"
               >
               EO-WAYFARER
@@ -91,7 +91,7 @@ const Projects = (props) => {
               className={classNames({active : activeKey === 'etelage'})}
               onClick={() => {toggle('etelage');}}
               as= {NavLink}
-              to={`${url}/etelage`}
+              to={`${url.slice(0,15)}${activeKey}`}
               eventKey="etelage"
               >
               ETELAGE
@@ -105,7 +105,7 @@ const Projects = (props) => {
               className={classNames({active : activeKey === 'portfolio'})}
               onClick={() => {toggle('portfolio');}}
               as= {NavLink}
-              to={`${url}/portfolio`}
+              to={`${url.slice(0,15)}${activeKey}`}
               eventKey="portfolio"
               >
               VAN DOAN

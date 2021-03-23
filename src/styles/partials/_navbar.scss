@@ -7,6 +7,9 @@
     top: 45%;
     transform: rotate(-90deg);
     z-index: 10000;
+    animation: fadeIn ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     .about {
         font-family: 'Barlow', sans-serif;
         color: #fff;
@@ -168,5 +171,14 @@
         .label {
             margin-top: 6px;
         }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
