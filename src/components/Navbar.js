@@ -35,10 +35,10 @@ const Navbar = () => {
               <div className="head-section">
                 <h1 className="greeting">Hello,</h1>
                 <h1 className="greeting2">I'm Andy <span className="highlight">Van Doan.</span></h1>
-                <p className="desc">I'm an Atlanta-based, full-stack savvy software engineer.</p>
+                <p className="desc">I'm an Atlanta-based, full-stack software engineer.</p>
                 <p className="desc">I design and build engaging, performant applications.</p>
                 <p className="desc">Machine learning and automation energize me.</p>
-                <p className="desc">If you have any cool projects or opportunities, let's work together!</p>
+                <p className="desc">If you have any cool projects or opportunities, let's work!</p>
               </div>
               <div className="subsection">
                 <h4>Education</h4>
@@ -54,12 +54,12 @@ const Navbar = () => {
               </div>
               <div className="subsection">
               <h4>Experience</h4>
+                <p className="subdesc">Senior Estimating Engineer</p>
+                <span className="exp-desc">at <a className="company-link" target="_blank" rel="noreferrer"  href="https://www.aptitudeii.com">JE Dunn (Aptitude)</a></span>
+                <span className="exp-date">April 2021-Current</span>
                 <p className="subdesc">Director of Business Development</p>
-                <span className="exp-desc">at <a className="company-link" target="_blank" rel="noreferrer"  href="https://www.six4creative.com">SIX4Creative</a></span>
-                <span className="exp-date">July 2020-Current</span>
-                <p className="subdesc">Growth Associate</p>
-                <span className="exp-desc">at <a className="company-link" target="_blank" rel="noreferrer"  href="https://www.ridewithvia.com">Via Transportation</a></span>
-                <span className="exp-date">2017-2020</span>
+                <span className="exp-desc">at <a className="company-link" target="_blank" rel="noreferrer"  href="https://www.six4creative.com">SIX4 Creative</a></span>
+                <span className="exp-date">July 2020-February 2021</span>
                 <p className="subdesc"><a href={resume} target="_blank">View Full Resume</a></p>
               </div>
             </div>

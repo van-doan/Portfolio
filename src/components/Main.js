@@ -43,7 +43,6 @@ const Main = () => (
   slidesNavigation = {true}
   controlArrows = {false}
   lazyLoading = {true}
-
   scrollOverflow={true}
   
 

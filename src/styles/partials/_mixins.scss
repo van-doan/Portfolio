@@ -24,6 +24,13 @@ $screen-macbook-h: 800px;
         @content;
     }
  }
+
+ // Mobile devices
+@mixin mobile {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
  
  // Medium devices
  @mixin md {

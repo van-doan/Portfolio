@@ -1,8 +1,3 @@
-// Fonts used:
-// font-family: 'Barlow', sans-serif;
-// font-family: 'Catamaran', sans-serif;
-// font-family: 'Poiret One', cursive;
-
 @import "./mixins";
 
 .content {
@@ -205,76 +200,81 @@
 
 // P R O J E C T   P A G E   S T Y L E S //
 .content1 {
+    display: flex;
+    justify-content: center;
+
     @include sm {
         margin: 4rem 0;
     }
 }
 
+.img-container{
+    @include xl{
+        position: fixed;
+        /* width: 1460px; */
+        height: 100%;
+        right: 0;
+        background-image: url(../../media/images/van-doan-proj-img.jpeg);
+        background-repeat: no-repeat;
+        width: 50%;
+        opacity: 8%;
+        font-size: 30px;
+        background-size: cover;
+        background-position: bottom;
+        animation: fadeInAndOut ease-in-out 3s;
+        animation-direction:alternate;
+        animation-iteration-count: infinite;
+        }
+    }
+
 .fp-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-flow: wrap;
     .project-card {
-        height: 250px;
-        margin: 4rem 3rem;
-        flex-direction: column;
+        @include sm {
+            margin: 6rem 0 0;
+        }
+
+        @include lg {
+            margin: 14rem 0 0;
+        }
+        @include xl {
+            margin: 11rem 0 0;
+        }
     }
     .project-img {
-        height: 100%;
-        border-radius: 10px;
-        width: 450px;
-        opacity: .8;
-        filter: invert(0) !important;
+        width: 800px;
         @include sm{
-            width: 400px;
+
         }
     }
     .project-img:hover {
         opacity: 1;
     }
+    
     .proj-title {
-        margin: -1.2rem 0;
-        display: flex;
-        position: relative;
-        z-index: 2;
-        justify-content: center;
-        font-family: 'Trykker', serif;
-        font-size: 30px;
-        mix-blend-mode: difference;
-    }
-    .proj-container {
-        display: flex;
-        flex-direction: column;
-        flex-flow: wrap;
-        justify-content: flex-end;
+        font-size: 50px;
         @include sm {
-            justify-content: center;
+            font-size:30px;
+        }
+    }
+
+    .proj-container {
+
+        @include sm {
+
         }
     }
     .proj {
-        flex-direction: column;
-        display: flex;
-        width: 30px;
-        align-items: center;
+
     }
     .proj-line-container, .proj-line-container2 {
-        border-bottom: solid;
-        border-bottom-width: thin;
-        width: 30px;
-        transform: rotate(90deg);
+
     }
     .proj-line-text {
-        transform: rotate(90deg);
-        width: 20%;
-        margin: 1em 0;
+
     }
     .proj-text {
-        margin-left: 0;
-        margin-bottom: 0;
-        margin-top: 0;
-        font-size: 12px;
-        font-family: 'Barlow';
+
     }
     .proj-a {
         color: white;
@@ -282,17 +282,88 @@
     }
 }
 
-.generic-footer {
+.proj-archives {
+    font-size: 20px !important;
+    text-decoration: underline;
+}
+
+.project-archive-card {
+    @include sm {
+        margin: 6rem 0 0;
+    }
+    @include lg {
+        margin: 4rem 0 0;
+    }
+
+    @include xl {
+        margin: 4rem 0 0;
+    }
+}
+
+.proj-archives {
+    height: 80px;
+}
+
+.proj-archives a {
+    color: rgb(179, 179, 179) !important;
+}
+
+.project-spacer-container {
     display: flex;
-    position: absolute;
-    bottom: 3%;
-    left: 45%;
-    width: 100%;
+    justify-content: center;
+}
+.project-spacer {
+    @include sm {
+        height: 60px;
+        width: 300px;
+        border: #fff solid .5px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        margin-bottom: 40px;
+    }
+    @include lg {
+        height: 200px;
+        width: 600px;
+        border: #fff solid .5px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        margin-bottom: 40px;
+    }
+    @include xl {
+        height: 100px;
+        width: 600px;
+        border: #fff solid .5px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        margin-bottom: 40px;
+    }
+}
+
+.iScrollVerticalScrollbar.iScrollLoneScrollbar {
+    width: 0px;
+}
+
+.generic-footer {
+    
+    @include lg {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    @include xl {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 50px;
+    }
     @include sm {
         display: flex;
-        position: absolute;
-        bottom: 20px;
-        left: 25%;
+        justify-content: center;
         width: 100%;
     }
 }
@@ -303,5 +374,14 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes fadeInAndOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 6%;
     }
 }
