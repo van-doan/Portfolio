@@ -241,8 +241,10 @@
             margin: 11rem 0 0;
         }
     }
+
     .project-img {
         width: 800px;
+        opacity: .8;
         @include sm{
 
         }

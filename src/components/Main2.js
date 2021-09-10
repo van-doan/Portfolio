@@ -11,11 +11,9 @@ import {CARD_LICENSE_KEY, LICENSE_KEY} from '../.env/key'
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import video from '../media/video/van-doan-loop.mp4';
 import arrow from '../media/images/down-arrow.png';
-import p1 from '../media/images/van-doan-proj-img.jpeg'
-import p2 from '../media/images/wayfarer-city.png'
-import p3 from '../media/images/flixr-playlist.png'
-import p4 from '../media/images/etelage-search.png'
-import p5 from '../media/images/vandoan-projects.png'
+import p1 from '../media/images/studio-chimera-proj.png'
+import p2 from '../media/images/redswitch-proj.png'
+// import p3 from '../media/images/corl-proj.png'
 
 const anchors = ["Intro", "Projects"];
 const pluginWrapper = () => {
@@ -95,7 +93,7 @@ const Main2 = () => (
                     <div className="proj-title-container">
                       <h2 className="proj-title">Studio Chimera</h2>
                     </div>
-                  <a className="project-link" target="_blank" rel="noreferrer" href="https://eo-wayfarer.herokuapp.com/"><img data-src={p2} className="project-img" alt="" />
+                  <a className="project-link" target="_blank" rel="noreferrer" href="https://studiochimera.dev"><img data-src={p1} className="project-img" alt="" />
                   </a> 
                 </div> 
                 <div className="proj-container">
@@ -113,7 +111,7 @@ const Main2 = () => (
                 <div className="proj-title-container">
                   <h2 className="proj-title">Redswitch LLC</h2>
                 </div>
-                <a className="project-link" target="_blank" rel="noreferrer" href="https://eo-wayfarer.herokuapp.com/"><img data-src={p2} className="project-img" alt="" />
+                <a className="project-link" target="_blank" rel="noreferrer" href="https://redswitch.dev"><img data-src={p2} className="project-img" alt="" />
                 </a> 
               </div> 
               <div className="proj-container">

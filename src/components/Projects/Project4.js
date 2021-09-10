@@ -21,7 +21,7 @@ const Project4 = () => {
         <p className="pdesc">Etelage blends the concept of social media and art curation into one immersive platform where users can create and share exhibits displayed in 3D or virtual reality.</p>
         <div className="proj-button row flex-row">
           <div className='pbuttoncontainer'>
-            <button className="pbutton"><Link className="plink" to="#">UNDER CONSTRUCTION</Link></button>
+            <button className="pbutton"><a href className="plink" to="#">UNDER CONSTRUCTION</a></button>
           </div>
           <div className="pdiscretion">
             <p className="pdisc">This Site is Under Construction</p>

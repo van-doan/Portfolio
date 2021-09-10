@@ -22,7 +22,7 @@ const Project3 = () => {
         <p className="pdesc">Interactive traveling blog to post articles and learn from other user's experiences. Exploring Odyssey also offers an internal API hosting 60+ destinations including travel tips and important info before you venture into your next adventure.</p>
         <div className="proj-button row flex-row">
           <div className='pbuttoncontainer'>
-            <button className="pbutton"><Link className="plink" target="_blank" to="https://eo-wayfarer.herokuapp.com/">SEE WEBSITE</Link></button>
+            <button className="pbutton"><a href className="plink" target="_blank" to="https://eo-wayfarer.herokuapp.com/">SEE WEBSITE</a></button>
           </div>
           <div className="pdiscretion">
             <p className="pdisc">Not Mobile-Responsive</p>
