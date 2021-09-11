@@ -19,7 +19,7 @@ const Project5 = () => {
         <p className="pdesc">Van Doan is a constantly evolving portfolio created by Andy Van Doan (me). The intention of Van Doan is to market my brand, to exhibit technology I've recently utilized, and to display my ongoing programming experience &amp; work to the curious few willing to explore.</p>
         <div className="proj-button row flex-row">
           <div className='pbuttoncontainer'>
-            <button className="pbutton"><a href className="plink" to="/">SEE WEBSITE</a></button>
+            <button className="pbutton"><a className="plink" href="/">SEE WEBSITE</a></button>
           </div>
           <div className="pdiscretion">
             <p className="pdisc"></p>

@@ -20,7 +20,7 @@ const Project2 = () => {
         <p className="pdesc">Flixr is a cinematic search engine powered by user responses to a simple this or that quizlet that generates movie choices to best match the user's current mood and interests. Flixr users are able to create their customized watchlist and also have the ability to see other user's playlists.</p>
         <div className="proj-button row flex-row">
           <div className='pbuttoncontainer'>
-            <button className="pbutton"><a href className="plink" target="_blank" to="https://flixr-io.herokuapp.com/">SEE WEBSITE</a></button>
+            <button className="pbutton"><a className="plink" target="_blank" href="https://flixr-io.herokuapp.com/">SEE WEBSITE</a></button>
           </div>
           <div className="pdiscretion">
             <p className="pdisc">Not Mobile-Responsive</p>

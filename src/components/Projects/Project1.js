@@ -18,7 +18,7 @@ const Project1 = () => {
         <p className="pdesc">Pokégotchi is a spin-off concept of Pokémon and Tamagotchi set in a post-apocalyptic era. Ensuring the Pokégotchi's survival is the user's job. The Pokégotchi may also evolve when meeting certain levels. When the Pokégotchi dies, the game ends.</p>
         <div className="proj-button row flex-row">
           <div className='pbuttoncontainer'>
-            <button className="pbutton"><a href className="plink" target="_blank" rel="noreferrer" to="https://pokegotchi-app.herokuapp.com/">SEE WEBSITE</a></button>
+            <button className="pbutton"><a className="plink" target="_blank" rel="noreferrer" href="https://pokegotchi-app.herokuapp.com/">SEE WEBSITE</a></button>
           </div>
           <div className="pdiscretion">
             <p className="pdisc">Not Mobile-Responsive</p>
