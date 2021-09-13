@@ -229,6 +229,33 @@
 
 .fp-content {
     display: flex;
+
+    .projects-div {
+        @include sm {
+            display: flex;
+            flex-direction:column-reverse;
+        }
+        @include lg {
+            display: flex;
+            flex-direction: row;
+        }
+        @include xl {
+            display: flex;
+            flex-direction: row;
+        }
+        .proj-container {
+            @include lg {
+                width: 210px;
+                margin: 19rem 0 0;
+                text-align: right;
+            }
+            @include xl {
+                width: 210px;
+                margin: 19rem 0 0;
+                text-align: right;
+            }
+        }
+    }
     .project-card {
         @include sm {
             margin: 6rem 0 0;
@@ -246,7 +273,8 @@
         width: 800px;
         opacity: .8;
         @include sm{
-
+            width: 395px;
+            opacity: .8;
         }
     }
     .project-img:hover {
@@ -255,6 +283,7 @@
     
     .proj-title {
         font-size: 50px;
+    
         @include sm {
             font-size:30px;
         }
@@ -263,20 +292,124 @@
     .proj-container {
 
         @include sm {
-
+            display:flex;
+            justify-content: center;
+            flex-direction:column;
+        }
+        @include lg {
+            width: 300px !important;
+            margin: 19rem 0 0;
+            text-align: right;
+        }
+        @include xl {
+            width: 300px !important;
+            margin: 19rem 0 0;
+            text-align: right;
         }
     }
     .proj {
-
+        display: flex;
+        @include sm {
+            display: flex;
+            justify-content:center;
+            flex-direction: column-reverse;
+        }
+        @include lg {
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        @include xl {
+            flex-direction: row;
+            justify-content: flex-end;
+        }
     }
-    .proj-line-container, .proj-line-container2 {
+    .proj-line-container {
+        @include sm {
+            height: 20px;
+            border-right: rgb(90, 90, 90) solid 1px;
+            width: 50%;
+        }
+        @include lg {
+            width: 30px;
+            border-bottom: #fff solid 1px;
+            height: 14px;
+            margin: 0 0 0 4px;
+            transition: width 450ms ease-out;
+        }
+        @include xl {
+            width: 30px;
+            border-bottom: #fff solid 1px;
+            height: 14px;
+            margin: 0 0 0 4px;
+            transition: width 450ms ease-out;
+        }
+    }
+    .proj-line-container-active {
+        @include sm {
+            height: 20px;
+            border-right: rgb(90, 90, 90) solid 1px;
+            width: 50%;
+        }
+        @include lg {
+            width: 300px;
+            border-bottom: #fff solid 1px;
+            height: 10px;
+            margin: 0 0 0 4px;
+            transition: width 450ms ease-out;
+        }
+        @include xl {
+            width: 300px;
+            border-bottom: #fff solid 1px;
+            height: 10px;
+            margin: 0 0 0 4px;
+            transition: width 450ms ease-out;
+        }
+    }
+    .proj-desc {
+        display: none;
+    }
+    .proj-desc-active {
+        @include sm {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
+        animation: fadeIn ease-in .5s;
+        animation-iteration-count: 1;
+        margin-top: 30px;
+        font-family: 'Barlow', sans-serif;
+        text-align: start;
+        .proj-role {
+            color: rgb(175, 174, 174);
+        }
+        .proj-job-desc {
+            text-transform: none;
+            @include sm {
+                margin: 5px 20px 0 20px;
+                align-items: center;
+                text-align: center;
+            }
+            @include lg {
+                margin: 15px 20px 0 0;          
+            }
+            @include xl {
+                margin: 15px 20px 0 0;
+            }
+        }
     }
     .proj-line-text {
 
     }
     .proj-text {
-
+        font-family: 'Barlow', sans-serif;
+        font-size: 20px;
+        text-transform: none !important;
+        letter-spacing: 3px;
+        @include sm {
+            margin-top: 0px;
+        }
     }
     .proj-a {
         color: white;
@@ -294,11 +427,11 @@
         margin: 6rem 0 0;
     }
     @include lg {
-        margin: 4rem 0 0;
+        margin: 9rem 0 0;
     }
 
     @include xl {
-        margin: 4rem 0 0;
+        margin: 9rem 0 0;
     }
 }
 
@@ -376,6 +509,12 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
     }
 }
 

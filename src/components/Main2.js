@@ -4,6 +4,9 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import { Link } from 'react-router-dom'
 import Footer from './Footer';
 import Navbar from './Navbar';
+import ProjectInfo1 from './Info/ProjectInfo1'
+import ProjectInfo2 from './Info/ProjectInfo2'
+import ProjectInfo3 from './Info/ProjectInfo3'
 
 import {CARD_LICENSE_KEY, LICENSE_KEY} from '../.env/key'
 
@@ -13,6 +16,7 @@ import video from '../media/video/van-doan-loop.mp4';
 import arrow from '../media/images/down-arrow.png';
 import p1 from '../media/images/studio-chimera-proj.png'
 import p2 from '../media/images/redswitch-proj.png'
+import p3 from '../media/images/corl-tech-proj.png'
 // import p3 from '../media/images/corl-proj.png'
 
 const anchors = ["Intro", "Projects"];
@@ -21,7 +25,6 @@ const pluginWrapper = () => {
 };
 
 const Main2 = () => (
-
   <ReactFullpage
   // License Key ** After Deployment **
   pluginWrapper = {pluginWrapper}
@@ -44,7 +47,7 @@ const Main2 = () => (
   lazyLoading = {true}
   scrollOverflow={true}
   scrollBar={true}
-  
+
   render={({ state, fullpageApi }) => {
     return (
     <ReactFullpage.Wrapper>
@@ -89,58 +92,35 @@ const Main2 = () => (
           <div className="fp-content content1">
             <div className="projects-container">
               <div className="projects-div">
+                <ProjectInfo1/>
+                  <div className="project-card">
+                      <div className="proj-title-container">
+                        <h2 className="proj-title">Studio Chimera</h2>
+                      </div>
+                    <a className="project-link" target="_blank" rel="noreferrer" href="#"><img data-src={p1} className="project-img" alt="" />
+                    </a> 
+                  </div> 
+              </div>
+              <div className="projects-div">
+                <ProjectInfo2/>
                 <div className="project-card">
-                    <div className="proj-title-container">
-                      <h2 className="proj-title">Studio Chimera</h2>
-                    </div>
-                  <a className="project-link" target="_blank" rel="noreferrer" href="https://studiochimera.dev"><img data-src={p1} className="project-img" alt="" />
+                  <div className="proj-title-container">
+                    <h2 className="proj-title">Redswitch LLC</h2>
+                  </div>
+                  <a className="project-link" target="_blank" rel="noreferrer" href="https://redswitch.dev"><img data-src={p2} className="project-img" alt="" />
                   </a> 
                 </div> 
-                <div className="proj-container">
-                  <div className="proj">
-                    <div className="proj-line-container"></div>
-                      <div className="proj-line-text">
-                        <a className="proj-a" href="/work/projects/eo-wayfarer">
-                          <h4 className="proj-text">Info</h4>
-                        </a>
-                      </div>
+              </div>
+              <div className="projects-div">
+                <ProjectInfo3/>
+                <div className="project-card">
+                  <div className="proj-title-container">
+                    <h2 className="proj-title">CORL Technologies</h2>
                   </div>
-                </div>
+                  <a className="project-link" target="_blank" rel="noreferrer" href="https://redswitch.dev"><img data-src={p3} className="project-img" alt="" />
+                  </a> 
+                </div> 
               </div>
-              <div className="project-card">
-                <div className="proj-title-container">
-                  <h2 className="proj-title">Redswitch LLC</h2>
-                </div>
-                <a className="project-link" target="_blank" rel="noreferrer" href="https://redswitch.dev"><img data-src={p2} className="project-img" alt="" />
-                </a> 
-              </div> 
-              <div className="proj-container">
-                <div className="proj">
-                  <div className="proj-line-container"></div>
-                    <div className="proj-line-text">
-                      <a className="proj-a" href="/work/projects/eo-wayfarer">
-                        <h4 className="proj-text">Info</h4>
-                      </a>
-                    </div>
-                </div>
-              </div>
-              <div className="project-card">
-                <div className="proj-title-container">
-                  <h2 className="proj-title">CORL Technologies</h2>
-                </div>
-                <a className="project-link" target="_blank" rel="noreferrer" href="https://eo-wayfarer.herokuapp.com/"><img data-src={p2} className="project-img" alt="" />
-                </a> 
-              </div> 
-              <div className="proj-container">
-                <div className="proj">
-                  <div className="proj-line-container"></div>
-                    <div className="proj-line-text">
-                      <a className="proj-a" href="/work/projects/eo-wayfarer">
-                        <h4 className="proj-text">Info</h4>
-                      </a>
-                    </div>
-                </div>
-              </div> 
               <div className="project-archive-card">
                 <div className="proj-title-container">
                   <h2 className="proj-archives"><a href="/work/projects/pokegotchi" className="archivedProjects">Archived Projects</a></h2>
