@@ -17,7 +17,7 @@ const ProjectInfo2 = () => {
       </div>
       <div className={!active ? "proj-desc":"proj-desc-active"}>
         <span className="proj-role">Marketing &amp; Software Engineer</span>
-        <p className="proj-job-desc">Redswitch is an Atlanta-based software development agency comprised of some of the most talented developers in the tech space. With Redswitch, my role has been focused on general marketing for the firm + developing front-end foundations for high-profile clients.</p>
+        <p className="proj-job-desc">Redswitch is an Atlanta-based software development agency comprised of some of the most talented developers in the tech space. With Redswitch, my role has been focused on general marketing for the firm + developing front-end infrastructure for high-profile clients.</p>
       </div>
     </div>
   )

@@ -16,7 +16,7 @@ const ProjectInfo1 = () => {
           <div className={!active ? "proj-line-container":"proj-line-container-active"}></div>
       </div>
       <div className={!active ? "proj-desc":"proj-desc-active"}>
-        <span className="proj-role">CEO &amp; Software Engineer</span>
+        <span className="proj-role">Co-Founder &amp; Software Engineer</span>
         <p className="proj-job-desc">Studio Chimera designs and constructs exquisite, modern software solutions. As a multi-faceted, software-focused agency, our team is profoundly obsessed with automating redudancy, product marketing/SEO, and creating the best digital experiences for our clients.</p>
       </div>
     </div>
