@@ -63,8 +63,9 @@ const Main2 = () => (
           <div className="video-container">
             <video id="video" 
             controls={false}
+            autoPlay={true}
+            muted
             playsInline 
-            autoPlay muted
             loop 
             data-keepplaying>
               <source data-src={video} type="video/mp4"></source>
