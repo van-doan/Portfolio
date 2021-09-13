@@ -45,7 +45,7 @@ const Main2 = () => (
   slidesNavigation = {true}
   controlArrows = {false}
   scrollOverflow={true}
-  scrollBar={true}
+  // scrollBar={true}
 
   render={({ state, fullpageApi }) => {
     return (
@@ -63,10 +63,11 @@ const Main2 = () => (
           <div className="video-container">
             <video id="video" 
             controls={false}
-            autoPlay={true}
+            autoPlay
             muted
             playsInline 
             loop 
+            data-autoplay
             data-keepplaying>
               <source data-src={video} type="video/mp4"></source>
             </video>
