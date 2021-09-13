@@ -4,6 +4,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import { Link } from 'react-router-dom'
 import Footer from './Footer';
 import Navbar from './Navbar';
+import video from '../media/video/van-doan-loop.mp4';
 import ProjectInfo1 from './Info/ProjectInfo1'
 import ProjectInfo2 from './Info/ProjectInfo2'
 import ProjectInfo3 from './Info/ProjectInfo3'
@@ -12,7 +13,6 @@ import {CARD_LICENSE_KEY, LICENSE_KEY} from '../.env/key'
 
 // Importing Media
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
-import video from '../media/video/van-doan-loop.mp4';
 import arrow from '../media/images/down-arrow.png';
 import p1 from '../media/images/studio-chimera-proj.png'
 import p2 from '../media/images/redswitch-proj.png'
@@ -44,7 +44,6 @@ const Main2 = () => (
   // Project Slides
   slidesNavigation = {true}
   controlArrows = {false}
-  lazyLoading = {true}
   scrollOverflow={true}
   scrollBar={true}
 
@@ -65,8 +64,7 @@ const Main2 = () => (
             <video id="video" 
             controls={false}
             playsInline 
-            autoPlay 
-            muted 
+            autoPlay muted
             loop 
             data-keepplaying>
               <source data-src={video} type="video/mp4"></source>
