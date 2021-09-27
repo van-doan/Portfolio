@@ -97,7 +97,7 @@ const Main2 = () => (
                       <div className="proj-title-container">
                         <h2 className="proj-title">Studio Chimera</h2>
                       </div>
-                    <a className="project-link" target="_blank" rel="noreferrer" href="#"><img data-src={p1} className="project-img" alt="" />
+                    <a className="project-link" target="_blank" rel="noreferrer" href="https://studiochimera.dev"><img data-src={p1} className="project-img" alt="" />
                     </a> 
                   </div> 
               </div>
