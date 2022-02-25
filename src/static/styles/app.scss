@@ -1,0 +1,230 @@
+// UPDATED SCSS //
+// Font Import //
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap');
+
+// Mixins Import //
+@import "./mixins/mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    user-select: inherit;
+    -webkit-user-drag: inherit;
+    -webkit-tap-highlight-color: inherit;
+    backface-visibility: inherit;
+}
+
+:root {
+    @include root($c-bg, $c-text, $pad);
+}
+
+html {
+    line-height: 1;
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: block;
+    background-color: $c-bg;
+    color:$c-text;
+    font-family: 'NeueMontrealLight', sans-serif;
+    font-weight: 530;
+    font-size: 15px;
+    letter-spacing: .02em;
+    font-feature-settings: 'palt';
+    text-size-adjust: none;
+    overscroll-behavior: none;
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+canvas {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h2 {
+    display: block;
+    font-size:1.5em;
+    margin-block-start:0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+button {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    pointer-events:all;
+    cursor: crosshair;
+}
+
+////////////////////////////////////////////////
+///////////////      LOADER      ///////////////
+////////////////////////////////////////////////
+
+#Loader {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    will-change: opacity;
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(0,0%,10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.3em;
+    font-size: 30px;
+        -webkit-animation: fadeOut 3.5s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadeOut 3.5s; /* Firefox < 16 */
+        -ms-animation: fadeOut 3.5s; /* Internet Explorer */
+        -o-animation: fadeOut 3.5s; /* Opera < 12.1 */
+        animation: fadeOut 3.5s;
+
+    ._l1 {
+        font-weight: 400;
+        opacity: 0;
+        font-size: 25px;
+            -webkit-animation: fadeOut 3.5s; /* Safari, Chrome and Opera > 12.1 */
+            -moz-animation: fadeOut 3.5s; /* Firefox < 16 */
+            -ms-animation: fadeOut 3.5s; /* Internet Explorer */
+            -o-animation: fadeOut 3.5s; /* Opera < 12.1 */
+            animation: fadeOut 3.5s;
+    }
+    ._l2 {
+        font-weight: 200;
+        color: rgb(66, 66, 66);
+        opacity: 0;
+        font-size: 25px;
+        margin-left:2px;
+            -webkit-animation: fadeOut 3.5s; /* Safari, Chrome and Opera > 12.1 */
+            -moz-animation: fadeOut 3.5s; /* Firefox < 16 */
+            -ms-animation: fadeOut 3.5s; /* Internet Explorer */
+            -o-animation: fadeOut 3.5s; /* Opera < 12.1 */
+            animation: fadeOut 3.5s;
+    }
+}
+
+@media (min-width: 1280px){
+    #Loader {
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        will-change: opacity;
+        background-color: hsl(0, 0%, 90%);
+        color: hsl(0,0%,10%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:row;
+        column-gap: 0.3em;
+    }
+    ._l1 {
+        font-weight: 400;
+        opacity: 0;
+        font-size: 25px !important;
+    }
+    ._l2 {
+        font-weight: 200;
+        color: rgb(66, 66, 66);
+        font-size: 25px !important;
+        opacity: 0;
+        margin-left: 2px !important;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+      }
+      to {
+        opacity: .75;
+        
+      }
+      to {
+        opacity: 0;
+        
+      }
+}
+
+
+
+
+// OLDER VERSION OF PORTFOLIO //
+
+// :root {
+//     background-color: #000;
+// }
+
+// [data-theme='light'] {
+//     background-color: #fff;
+//     color: #000;
+//     // filter: invert(90%);
+// }
+
+// body {
+//     background-color: #000;
+//     color: #fff;
+//     margin: 0;
+//     cursor: crosshair;
+// }
+// .section {
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     margin: 0;
+//     max-width: none;
+//     height: 101vh;
+// }
+
+// .MuiSwitch-track {
+//     background-color: #fff !important;
+// }
+
+// .MuiFormControlLabel-root {
+//     transform: rotate(90deg);
+// }
+
+// .dark-mode-switch {
+//     display: flex;
+//     position: absolute;
+//     left: 2.4%;
+//     top: 30%;
+// }
+
+// @import "./partials/main2";
+// @import "./partials/navbar";
+// @import "./partials/projects";

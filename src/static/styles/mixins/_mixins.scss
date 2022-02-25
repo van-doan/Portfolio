@@ -1,0 +1,57 @@
+// Color Mixins & Contants //
+$c-bg: hsl(0, 0%, 90%);
+$c-text: hsl(0, 0%, 10%);
+
+@mixin theme($light-theme: true){
+    @if $light-theme {
+        background-color: hsl(0,0%,90%);
+        color: hsl(0,0%,10%);
+    } @else {
+        background-color:hsl(0, 0%, 10%);
+        color:hsl(0, 0%, 90%)
+    }
+}
+
+// Padding/Margins Mixins & Constants //
+$pad: max(20px, 4vmin);
+
+// ViewPort Mixins & Constant //
+$vw: 7.03px;
+$vh: 8.48px;
+$vmax: 7.09px;
+$vmin: 7.03px;
+
+// Font Faces/Imports //
+
+@font-face {
+    font-family: NeueMontrealBold;
+    font-weight: 800;
+    src: url("../fonts/NeueMontreal-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: NeueMontrealMedium;
+    font-weight: 530;
+    src: url("../fonts/NeueMontreal-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: NeueMontrealRegular;
+    font-weight: 450;
+    src: url("../fonts/NeueMontreal-Regular.otf") format("opentype");
+}
+
+
+@font-face {
+    font-family: NeueMontrealLight;
+    font-weight: 200;
+    src: url("../fonts/NeueMontreal-Light.otf") format("opentype");
+}
+
+@mixin root($c-bg, $c-text, $pad) {
+    background-color: $c-bg;
+    color: $c-text;
+    padding: $pad;
+}
+
+

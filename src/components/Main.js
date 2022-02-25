@@ -1,228 +1,249 @@
-// Functional Imports
-import React from 'react';
-import ReactFullpage from '@fullpage/react-fullpage';
-import { Link } from 'react-router-dom'
-import Footer from './Footer';
-import Navbar from './Navbar';
+import React,{ useState, useEffect, useRef } from 'react';
+import { Menu, Layout, Button } from 'antd';
+import { HomeText, ProjectText, ContactText } from './MainText';
+import '../static/styles/global/page.scss';
+import { ReactP5Wrapper } from 'react-p5-wrapper';
+import Basep5 from 'p5'
 
-import {CARD_LICENSE_KEY, LICENSE_KEY} from '../.env/key'
+const { Header, Content } = Layout;
 
-// Importing Media
-import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
-import video from '../media/video/van-doan-loop.mp4';
-import arrow from '../media/images/down-arrow.png';
-import p1 from '../media/images/pokegotchi-main-screen.png'
-import p2 from '../media/images/wayfarer-city.png'
-import p3 from '../media/images/flixr-playlist.png'
-import p4 from '../media/images/etelage-search.png'
-import p5 from '../media/images/vandoan-projects.png'
 
-const anchors = ["Intro", "Projects"];
-const pluginWrapper = () => {
-  require('../static/fullpage.cards.min');
-};
+const Main = (props) => {
+  const [theme, setTheme] = useState(false);
+  const [selected, setSelected] = useState(true);
+  const [key, setKey] = useState('home');
+  const [offsetY, setOffsetY] = useState(0);
+  const divRef = useRef(null);
 
-const Main = () => (
-  <ReactFullpage
-  // License Key ** After Deployment **
-  pluginWrapper = {pluginWrapper}
-  licenseKey = {LICENSE_KEY}
-  // Required Extension Wrapper
-  // Page Navigation States
-  anchors = {anchors}
-  navigation = {true}
-  navigationTooltips = {anchors}
-  scrollingSpeed = {600}
-  showActiveTooltip = {true}
-  // Card States
-  cardsKey = {CARD_LICENSE_KEY}
-  cards = {true}
-  cardsOptions = {{perspective: 200, fadeContent: true, fadeBackground: true}}
+///////// CANVAS FUNCTIONS //////////
 
-  // Project Slides
-  slidesNavigation = {true}
-  controlArrows = {false}
-  lazyLoading = {true}
-  scrollOverflow={true}
+  let width = 500;
+  let height = 500;
+
+
+  const MainCanvas = (p5) => {
+    let pathPoints = []
+    let strokeColor;
+
+    p5.updateWithProps = props => {
+      if (props.theme!==undefined) {
+        strokeColor = props.theme ? 'rgba(255,255,255,0.2)': 'rgba(0,0,0,0.2)'
+      }
+    };
+
+    if(theme){
+      p5.setup = () => {
+        p5.createCanvas(600,600)
+        p5.background('rgba(26, 26, 26, 0)')
+        p5.frameRate(30)
+        // 30FPS is dec but may need to revisit for optimization (mobile specifically) //
+      }
+
+      p5.draw = () => {
+        pathPoints = circlePoints();
+        for(let j=0; j<6; j++){
+          pathPoints = complexifyPath(pathPoints);
+        }  
+        p5.stroke(strokeColor);
+        p5.strokeWeight(.12);
+          
+        for(var i=0;i<pathPoints.length -1;i++){
+          var v1 = pathPoints[i];
+          var v2 = pathPoints[i+1];
+          p5.line(v1.x,v1.y,v2.x,v2.y);
+        }
+      }
+
+      const complexifyPath = (pathPoints) => {
+        let newPath = [];
+
+        for(var i=0;i<pathPoints.length -1;i++){
+          let v1 = pathPoints[i];
+          let v2 = pathPoints[i+1];
+          let midPoint = Basep5.Vector.add(v1, v2).mult(0.5);
+          let distance =  v1.dist(v2);
+
+          let standardDeviation = 0.125*distance;
+          let v = p5.createVector(p5.randomGaussian(midPoint.x, standardDeviation), p5.randomGaussian(midPoint.y, standardDeviation))
+          newPath.push(v1);
+          newPath.push(v);
+        }
+        newPath.push(pathPoints[pathPoints.length-1])
+        return newPath;
+      }
+
+      const circlePoints=()=>{
+        let r = p5.width/2.1;
+        let theta1 = p5.randomGaussian(0, p5.PI/4);
+        let theta2 = theta1 + p5.randomGaussian(0, p5.PI/3);
+        let v1 = p5.createVector(p5.width/2 + r*p5.cos(theta1), p5.width/2 + r*p5.sin(theta1));
+        let v2 = p5.createVector(p5.width/2 + r*p5.cos(theta2), p5.width/2 + r*p5.sin(theta2));
+        return [v1,v2];
+      }
+    } else {
+      p5.setup = () => {
+        p5.createCanvas(600,600)
+        p5.background('rgba(230,230,230,0)')
+        p5.frameRate(30)
+        // 30FPS is dec but may need to revisit for optimization (mobile specifically) //
+      }
+
+      p5.draw = () => {
+        pathPoints = circlePoints();
+        for(let j=0; j<6; j++){
+          pathPoints = complexifyPath(pathPoints);
+        }
+        // p5.strokeWeight(.05);
+        p5.stroke(strokeColor);
+        p5.strokeWeight(.12);
+        
+        
+        for(var i=0;i<pathPoints.length -1;i++){
+          var v1 = pathPoints[i];
+          var v2 = pathPoints[i+1];
+          p5.line(v1.x,v1.y,v2.x,v2.y);
+        }
+      }
+
+      const complexifyPath = (pathPoints) => {
+        let newPath = [];
+
+        for(var i=0;i<pathPoints.length -1;i++){
+          let v1 = pathPoints[i];
+          let v2 = pathPoints[i+1];
+          let midPoint = Basep5.Vector.add(v1, v2).mult(0.5);
+          let distance =  v1.dist(v2);
+
+          let standardDeviation = 0.125*distance;
+          let v = p5.createVector(p5.randomGaussian(midPoint.x, standardDeviation), p5.randomGaussian(midPoint.y, standardDeviation))
+          newPath.push(v1);
+          newPath.push(v);
+        }
+        newPath.push(pathPoints[pathPoints.length-1])
+        return newPath;
+      }
+
+      const circlePoints=()=>{
+        let r = p5.width/2.1;
+        let theta1 = p5.randomGaussian(0, p5.PI/4);
+        let theta2 = theta1 + p5.randomGaussian(0, p5.PI/3);
+        let v1 = p5.createVector(p5.width/2 + r*p5.cos(theta1), p5.width/2 + r*p5.sin(theta1));
+        let v2 = p5.createVector(p5.width/2 + r*p5.cos(theta2), p5.width/2 + r*p5.sin(theta2));
+        return [v1,v2];
+      }
+    }
+  }
+
+  ///////// SCROLL FUNCTIONS //////////
+
+    // useEffect(()=> {
+    //   const onScroll = () => setOffsetY(window.pageYOffset);
+    //   window.removeEventListener('scroll', onScroll);
+    //   window.addEventListener('scroll', onScroll, {passive: true});
+    //   return () => window.removeEventListener('scroll', onScroll)
+    // }, [])
+    // console.log(offsetY)
+
+    // const handleScroll = (e) => {
+    //   let srcElement = document.querySelector('.projects');
+    //   let scrollTop = e.srcElement.body.scrollTop,
+    //       offsetY = Math.min(0, scrollTop/3 - 60);
+    //       setOffsetY(offsetY);
+    // }
+
+///////// TOGGLING FUNCTIONS //////////  
+
+    const toggleLightMode = () =>{
+      setTheme(false);
+    }
   
+    const toggleDarkMode = () =>{
+      setTheme(true);
+    }
 
-  
-  render={({ state, fullpageApi }) => {
-    return (
-    <ReactFullpage.Wrapper>
-      <Navbar/>
-    <div id="fullpage-wrapper" class="content">
-      <div className="section" id="section1">
-        <div className="title-content">
-          <h1 className="name"><a href="/">van doan</a></h1>
-          <h2 className="desc-one">creative tech / software engineer</h2>
-          <h3 className="desc-two">based in Atlanta</h3>
-        </div>
-        <div className="dark-mode-switch">
-        </div>
-        <div className="video-container">
-          <video id="video" 
-          controls={false}
-          playsInline 
-          autoPlay 
-          muted 
-          loop 
-          data-keepplaying>
-            <source data-src={video} type="video/mp4"></source>
-          </video>
-        </div>
-      <div className="contact-list">
-        <a className="contact-icon" target="_blank" rel="noreferrer" href="mailto:van-doan@outlook.com"><FaEnvelope/></a>
-        <a className="contact-icon" target="_blank" rel="noreferrer" href="https://github.com/van-doan"><FaGithub /></a>
-        <a className="contact-icon" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/andyvdoan/"><FaLinkedin /></a>
-      </div>
-      <div className="v1-container"></div>
-        <div className="arrow-div">
-          <input className="arrow" type="image" onClick={() => fullpageApi.moveSectionDown()} src={arrow} alt="arrow"></input>
-        </div>
-      </div>
+    const handleSelect = () => {
+      if(selected){
+        setSelected(false);
+    } 
+  }
 
-      <div className="section" id="section2">
-        <nav className="home-nav">
-          <input className="home" type="button" onClick={() => fullpageApi.moveTo('Intro', 0)} value="VAN DOAN" alt="home"></input>
-        </nav>
-        <div className="fp-content content1">
-          <div className="projects-container">
-            <div className="project-card">
-              <div className="project-img">
-                <div className="proj-title-container">
-                  <h2 className="proj-title">Pokegotchi</h2>
-                </div> 
-                <a className="project-link" target="_blank" rel="noreferrer" href="https://pokegotchi-app.herokuapp.com/"><img data-src={p1} className="project-img" alt="" /></a>
-                <div className="proj-container">
-                  <div className="proj">
-                    <div className="proj-line-container"></div>
-                    <div className="proj-line-text">
-                      <Link to="/work/projects/pokegotchi" className="proj-a">
-                        <h4 className="proj-text">Info</h4>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="proj">
-                    <div className="proj-line-container2"></div>
-                    <div className="proj-line-text">
-                      <a className="proj-a" target="_blank" rel="noreferrer" href="https://github.com/van-doan/Pokegotchi">
-                        <h4 className="proj-text">Code</h4>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>   
-            <div className="project-card">
-              <div className="proj-title-container">
-                <h2 className="proj-title">EO Wayfarer</h2>
-              </div>
-              <a className="project-link" target="_blank" rel="noreferrer" href="https://eo-wayfarer.herokuapp.com/"><img data-src={p2} className="project-img" alt="" /></a> 
-              <div className="proj-container">
-                  <div className="proj">
-                    <div className="proj-line-container"></div>
-                    <div className="proj-line-text">
-                      <a className="proj-a" href="/work/projects/eo-wayfarer">
-                        <h4 className="proj-text">Info</h4>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="proj">
-                    <div className="proj-line-container2"></div>
-                    <div className="proj-line-text">
-                      <a className="proj-a" target="_blank" rel="noreferrer" href="https://github.com/van-doan/EO-Wayfarer">
-                        <h4 className="proj-text">Code</h4>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-            </div> 
-          </div> 
-          <div className="projects-container">
-            <div className="project-card">
-              <div className="proj-title-container">
-                <h2 className="proj-title">Flixr</h2>
-              </div>
-              <a className="project-link" target="_blank" rel="noreferrer" href="https://flixr-io.herokuapp.com/"><img data-src={p3} className="project-img" alt="" /></a>
-              <div className="proj-container">
-                  <div className="proj">
-                    <div className="proj-line-container"></div>
-                    <div className="proj-line-text">
-                      <a className="proj-a" href="/work/projects/flixr">
-                        <h4 className="proj-text">Info</h4>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="proj">
-                    <div className="proj-line-container2"></div>
-                    <div className="proj-line-text">
-                      <a className="proj-a" target="_blank" rel="noreferrer" href="https://github.com/van-doan/Flixr">
-                        <h4 className="proj-text">Code</h4>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-            </div>  
-            <div className="project-card">            
-              <div className="proj-title-container">
-                <h2 className="proj-title">Etelage</h2>
-              </div>
-              <img data-src={p4} className="project-img" alt="" /> 
-              <div className="proj-container">
-                  <div className="proj">
-                    <div className="proj-line-container"></div>
-                    <div className="proj-line-text">
-                      <a className="proj-a" href="/work/projects/etelage">
-                        <h4 className="proj-text">Info</h4>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="proj">
-                    <div className="proj-line-container2"></div>
-                    <div className="proj-line-text">
-                      <a className="proj-a" target="_blank" rel="noreferrer" href="https://github.com/van-doan/Etelage">
-                        <h4 className="proj-text">Code</h4>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-            </div>  
-          </div>
-          <div className="projects-container">
-            <div className="project-card">
-              <div className="proj-title-container">
-                <h2 className="proj-title">Van Doan</h2>
-              </div>
-              <a className="project-link" target="_blank" rel="noreferrer" href="https://van-doan.dev/"><img data-src={p5} className="project-img" alt="" style={{    borderStyle: 'solid', borderWidth:'thin', borderColor: "#fff"}}/></a>
-              <div className="proj-container">
-                  <div className="proj">
-                    <div className="proj-line-container"></div>
-                    <div className="proj-line-text">
-                      <a className="proj-a" href="/work/projects/portfolio">
-                        <h4 className="proj-text">Info</h4>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="proj">
-                    <div className="proj-line-container2"></div>
-                    <div className="proj-line-text">
-                      <a className="proj-a" target="_blank" rel="noreferrer" href="https://github.com/van-doan/Portfolio">
-                        <h4 className="proj-text">Code</h4>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-            </div>
+
+    const handleMenuSelection = (event) => {
+      if(selected){
+        setSelected(false);
+        setKey(event.key)
+        setSelected(true);
+      } 
+    }
+
+
+  return(
+    <div id='Page' className={`page ${theme ? 'is_dark' : ''}`}>
+    {/* <Loader /> */}
+      {/* React Three component will be inserted */}
+      <div id='Background'>
+        <ReactP5Wrapper theme={theme} sketch={MainCanvas} />
+      </div>
+      <div className='mask' id='Mask'>
+        <div className={`mask_top ${theme ? 'dark_mask' : 'light_mask'}`}></div>
+        <div className={`mask_bottom ${theme ? 'dark_mask' : 'light_mask'}`}></div>
+      </div>
+      {/* Lines to encase content */}
+      <div id='Frame' className='frame'>
+        <div className={`frame_line frame_line_left ${theme ? 'lighten_border' : 'darken_border'}`}></div>
+        <div className={`frame_line frame_line_right ${theme ? 'lighten_border' : 'darken_border'}`}></div>
+        <div className={`frame_line frame_line_top ${theme ? 'lighten_border' : 'darken_border'}`}></div>
+        <div className={`frame_line frame_line_bottom ${theme ? 'lighten_border' : 'darken_border'}`}></div>
+      </div>
+      {/* Toggle Theme from Dark to Light Mode */}
+      <div className='theme' id='Theme'>
+        <div className='theme_color'>
+          <div className={`theme_btn ${theme ? 'dark_btn' : 'light_btn'} ${theme ? '' : 'is-selected'}`} onClick={toggleLightMode}>
+              <span className={`_box`}></span>
+              <span className='_text'>Light</span>
           </div>
         </div>
-      <Footer />
+        <div className='theme_color'>
+          <div className={`theme_btn ${theme ? 'dark_btn' : 'light_btn'} ${theme ? 'is-selected' : ''}`} onClick={toggleDarkMode}>
+            <span className={`_box`}></span>
+            <span className='_text'>Dark</span>
+          </div>
+        </div>
       </div>
+    <Header className='siteHeader' id='SiteHeader'>
+      <h1 className='siteHeader_title'>Van Doan</h1>
+      <p className='siteHeader_label'>Developer &amp; Product Strategist</p>
+      <Menu 
+        className='siteHeader_nav' 
+        onClick={handleMenuSelection}>
+        <Menu.Item className='nav-item' key='home' onClick={handleSelect} style={selected && key==='home' ? { fontWeight: '700'} : {fontWeight: 'inherit'}}>
+          Home
+        </Menu.Item>
+        <Menu.Item className='nav-item' key='projects' onClick={handleSelect} style={selected && key==='projects' ? { fontWeight: '700'} : {fontWeight: 'inherit'}}>Projects</Menu.Item>
+        <Menu.Item className='nav-item' key='contact' onClick={handleSelect} style={selected && key==='contact' ? { fontWeight: '700'} : {fontWeight: 'inherit'}}>Contact</Menu.Item>
+      </Menu>
+    </Header>
+    <Content className='content' id='Content'>
+      <div className="content_inner">
+      
+        <section className="page" data-page='home' style={selected && key==='home' ? { display: 'block', animation:'fadeIn 1000ms'} : {display: 'none', opacity: '0', }}>
+          
+          <HomeText/>
+        </section>
+        <section className="page" data-page='projects' style={selected && key==='projects' ? { display: 'block', animation:'fadeIn 1000ms'} : {display: 'none', opacity: '0'}}>
+        
+          <ProjectText/>
+        </section>
+        <section className="page" data-page='contact' style={selected && key==='contact' ? { display: 'block', animation:'fadeIn 1000ms'} : {display: 'none', opacity: '0'}}>
+          <ContactText/>
+        </section>
+      </div>
+    </Content>
+
     </div>
-    </ReactFullpage.Wrapper>
-    );
-  }}
-/>
-);
+    )
+  }
+
+
 
 export default Main;
